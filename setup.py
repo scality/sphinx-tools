@@ -1,26 +1,26 @@
 # coding: utf-8
-"""`scaldoc` package.
+"""`sphinx_scality` package.
 
 Includes a Sphinx theme and other Sphinx customizations.
 """
 from setuptools import setup
 
-from scaldoc import __version__
+from sphinx_scality import __version__
 
 with open('README.md', encoding='utf-8') as f:
     readme_data = f.read()
 
 setup(
-    name='scaldoc',
+    name='sphinx_scality',
     version=__version__,
     author='Scality',
     author_email='docs@scality.com',  # FIXME
     description='Scality package for Sphinx (includes theme)',
     long_description=readme_data,
     zip_safe=False,
-    packages=['scaldoc'],
+    packages=['sphinx_scality'],
     package_data={
-        'scaldoc': [
+        'sphinx_scality': [
             'theme.conf',
             '*.html',
             'static/css/*.css',
@@ -31,7 +31,7 @@ setup(
     },
     entry_points={
         'sphinx.html_themes': [
-            'scaldoc = scaldoc',
+            'sphinx_scality = sphinx_scality',
         ]
     },
     install_requires=['sphinx'],
