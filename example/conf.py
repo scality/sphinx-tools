@@ -22,6 +22,9 @@
 # sys.path.insert(0, os.path.abspath('.'))
 
 
+import scaldoc
+
+
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -52,6 +55,9 @@ master_doc = 'index'
 project = 'Example RING Documentation'
 copyright = '2019, Scality Technical Publications'
 author = 'Scality Technical Publications'
+
+# Used for finding the project logo and defining some links
+project_identifier = 'RING'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -86,7 +92,7 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'scaldoc'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -99,16 +105,16 @@ html_theme = 'alabaster'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-# Custom sidebar templates, must be a dictionary that maps document names
-# to template names.
-#
-# This is required for the alabaster theme
-# refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
-html_sidebars = {
-    '**': [
-        'relations.html',  # needs 'show_related': True theme option to display
-        'searchbox.html',
-    ]
+html_last_updated_fmt = '%B %d, %Y'
+
+html_show_sphinx = False
+html_show_source = False
+
+html_logo = '_static/{}_logo.svg'.format(project_identifier)
+
+# Extra variables to pass to templates
+html_context = {
+    'project_identifier': project_identifier,
 }
 
 
