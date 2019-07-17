@@ -1,0 +1,38 @@
+<div class="footer" role="contentinfo">
+  <div class="leftwrapper">
+    <div class="baselogo"><a href="https://documentation.scality.com/">
+      <img class="baselogo" src="{{ pathto('_static/img/scality-logo-white.svg', 1) }}" alt="Logo"/>
+      <p>documentation</p>
+    </a></div>
+    <div class="links">
+      Scality, Inc. All rights reserved. |
+      <a href="https://support.scality.com/">Support</a> |
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Training</a>
+    </div>
+    <div class="copyright">
+      {%- if hasdoc('copyright') %}
+        {% trans path=pathto('copyright'), copyright=copyright|e %}&#169; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+      {%- else %}
+        {% trans copyright=copyright|e %}&#169; Copyright {{ copyright }}.{% endtrans %}
+      {%- endif %}
+      {%- if last_updated %}
+        {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+      {%- endif %}
+    </div>
+  </div>
+  <div class="rightwrapper">
+    <a href="https://www.linkedin.com/company/scality/">
+      <img class="social" src="{{ pathto('_static/img/social/linkedin.png', 1) }}" alt="LinkedIn"/>
+    </a>
+    <a href="https://twitter.com/scality/">
+      <img class="social" src="{{ pathto('_static/img/social/twitter.png', 1) }}" alt="Twitter"/>
+    </a>
+    <a href="https://www.facebook.com/scality/">
+      <img class="social" src="{{ pathto('_static/img/social/facebook.png', 1) }}" alt="Facebook"/>
+    </a>
+    <a href="https://www.instagram.com/scalitylife/">
+      <img class="social" src="{{ pathto('_static/img/social/instagram.png', 1) }}" alt="Instagram"/>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,267 @@
+/* Grid layout for the whole body
+
+  To be refined if independent scroll is required.
+*/
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 300px auto 300px;
+    grid-template-rows: 200px auto 180px;
+    grid-template-areas:
+        "header header header"
+        "lsidebar content rsidebar"
+        "footer footer footer";
+    background-color: {{ theme_bgcolor }};
+}
+
+
+/* Scality documentation logo */
+
+div.baselogo > a {
+    display: flex;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+}
+
+div.header div.baselogo > a {
+    color: {{ theme_headtextcolor }};
+}
+
+div.header div.baselogo > a:hover {
+    color: {{ theme_headtextcolor }};
+    text-decoration: none;
+}
+
+img.baselogo {
+    width: 200px;
+}
+
+
+/* HEADER */
+
+div.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    background-color: {{ theme_headbgcolor }};
+    color: {{ theme_headtextcolor }};
+    padding: 20px 20px 10px;
+}
+
+/* Quick fix for logo margin */
+div.header img.logo {
+    margin-right: 10px;
+}
+
+div.header > div.quicksearch input[name="q"] {
+    float: right;
+}
+
+div.header > div.back-arrow img {
+    height: 50px;
+}
+
+
+/* SIDEBARS */
+
+/* Sidebars positioning */
+div.sidebar {
+    position: relative;
+    margin: 0;
+    padding: 0 20px;
+    width: auto;
+    overflow: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    background-color: {{ theme_sidebarbgcolor }};
+    color: {{ theme_sidebartextcolor }};
+    border: none;
+}
+
+div.sidebar.left {
+    grid-area: lsidebar;
+}
+
+div.sidebar.left:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 70%;
+    border-right: 1px solid {{ theme_sidebarguttercolor }};
+}
+
+div.sidebar.right {
+    grid-area: rsidebar;
+}
+
+div.sidebar.right:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30%;
+    border-left: 1px solid {{ theme_sidebarguttercolor }};
+}
+
+/* Left sidebar logo */
+div.logo > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    text-decoration: none;
+}
+
+div.logo img {
+    width: 180px;
+}
+
+div.logo p {
+    font-family: Oswald;
+    font-weight: 600;
+    font-size: 30px;
+    margin-block-start: 5px;
+    margin-block-end: unset;
+    color: {{ theme_sidebarlinkcolor }};
+}
+
+/* Left sidebar title */
+div.sidebar.left h2 {
+    position: relative;
+    font-family: Oswald;
+}
+
+div.sidebar.left h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid {{ theme_sidebarguttercolor }};
+}
+
+div.sidebar.left h2 > a {
+    color: {{ theme_sidebarlinkcolor }};
+}
+
+div.sidebar.left h2 > a:hover {
+    text-decoration: none;
+    color: {{ theme_headtextcolor }};
+}
+
+/* Left sidebar navigation */
+div.sidebar-nav ul {
+    list-style-type: none;
+}
+
+div.sidebar-nav > ul {
+    padding: 0;
+}
+
+div.sidebar-nav ul ul {
+    padding-left: 20px;
+}
+
+div.sidebar-nav li {
+    margin-top: 5px;
+}
+
+div.sidebar-nav a {
+    color: {{ theme_sidebarlinkcolor }};
+}
+
+div.sidebar-nav a:hover {
+    text-decoration: none;
+    color: {{ theme_sidebarlinkactivecolor }};
+}
+
+div.sidebar-nav a.current {
+    color: {{ theme_sidebarlinkactivecolor }};
+}
+
+/* Right sidebar */
+div.sidebar.right p.caption {
+    margin: 15px 10px;
+    color: {{ theme_headtextcolor }};
+}
+
+div.sidebar.right a {
+    color: {{ theme_sidebarlinkcolor }};
+}
+
+div.sidebar.right a:hover {
+    text-decoration: none;
+    color: {{ theme_sidebarlinkactivecolor }};
+}
+
+div.sidebar.right ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+div.sidebar.right > ul {
+    padding-left: 0;
+}
+
+/* First link is the current page, we hide it */
+div.sidebar.right > ul > li > a {
+    display: none;
+}
+
+div.sidebar.right li {
+    margin-top: 10px;
+}
+
+
+/* CONTENT */
+
+div.body {
+    margin: 40px 20px;
+}
+
+/* FOOTER */
+
+div.footer {
+    grid-area: footer;
+    width: auto;
+    padding: 20px;
+    display: flex;
+    background-color: {{ theme_footerbgcolor }};
+    color: {{ theme_footertextcolor }};
+}
+
+div.footer a, div.footer a:hover {
+    text-decoration: none;
+    color: {{ theme_footertextcolor }};
+}
+
+div.footer div.leftwrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+div.footer div.links {
+    font-size: 1.8em;
+    margin-top: -10px;
+}
+
+div.footer div.rightwrapper {
+    display: flex;
+    flex-grow: 1;
+    padding-right: 15px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+div.footer div.rightwrapper img.social {
+    margin: auto 15px;
+}

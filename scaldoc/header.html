@@ -1,0 +1,18 @@
+<div class="header">
+    <div class="baselogo"><a href="https://documentation.scality.com">
+        <img class="baselogo"
+             src="{{ pathto('_static/img/scality-logo-black.svg', 1) }}"
+             alt="Logo"/>
+        <p>documentation</p>
+    </a></div>
+    <div class="quicksearch">
+        {%- include "searchbox.html" %}
+    </div>
+    <div class="back-arrow">
+        <a href="https://documentation.scality.com/{{ project_identifier }}/{{ version }}">
+            <img class="back-arrow"
+                 src="{{ pathto('_static/img/back-arrow.png', 1) }}"
+                 alt="Back to documentation"/>
+        </a>
+    </div>
+</div>
