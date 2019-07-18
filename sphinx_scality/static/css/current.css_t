@@ -265,3 +265,8 @@ div.footer div.rightwrapper {
 div.footer div.rightwrapper img.social {
     margin: auto 15px;
 }
+
+.term {
+    color: #F37533;
+    font-weight: bold;
+}
