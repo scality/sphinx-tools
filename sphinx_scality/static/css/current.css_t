@@ -77,7 +77,7 @@ div.sidebar {
     margin: 0;
     padding: 0 20px;
     width: auto;
-    overflow: auto;
+    overflow: visible;
     overflow-wrap: break-word;
     word-wrap: break-word;
     background-color: {{ theme_sidebarbgcolor }};
@@ -188,6 +188,12 @@ div.sidebar-nav a.current {
 }
 
 /* Right sidebar */
+
+div.fixed-sidebar{
+    position: sticky;
+    top: 10px;
+}
+
 div.sidebar.right p.caption {
     margin: 15px 10px;
     color: {{ theme_headtextcolor }};
@@ -269,4 +275,19 @@ div.footer div.rightwrapper img.social {
 .term {
     color: #F37533;
     font-weight: bold;
+}
+
+/* search box */
+
+input[type=text], select {
+  width: 300px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-image: url(../img/search-icon.png);
+  background-size: 35px 35px;
+  background-position: right;
+  background-repeat: no-repeat;
+  padding: 10px 20px 12px 30px;
+
 }
