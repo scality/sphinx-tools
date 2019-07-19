@@ -26,7 +26,7 @@ if (!Scorer) {
     // query matches the full name of an object
     objNameMatch: 11,
     // or matches in the last dotted part of the object name
-    objPartialMatch: 6,
+    objPartialMatch: 15,
     // Additive scores depending on the priority of the object
     objPrio: {0:  15,   // used to be importantResults
               1:  5,   // used to be objectResults
@@ -249,7 +249,7 @@ var Search = {
           // dirhtml builder
           var dirname = item[0] + '/';
           if (dirname.match(/\/index\/$/)) {
-            dirname = dirname.substring(0, dirname.length-6);
+            dirname = dirname.substring(0, dirname.length-15);
           } else if (dirname == 'index/') {
             dirname = '';
           }
