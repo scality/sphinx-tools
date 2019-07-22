@@ -106,6 +106,7 @@ html_last_updated_fmt = '%B %d, %Y'
 
 html_show_sphinx = False
 html_show_source = False
+html_add_permalinks = '#'
 
 html_logo = '_static/{}_logo.svg'.format(project_identifier)
 

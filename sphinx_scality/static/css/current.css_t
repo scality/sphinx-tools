@@ -18,6 +18,7 @@ body {
         "lsidebar content rsidebar"
         "footer footer footer";
     background-color: {{ theme_bgcolor }};
+    font-weight: 350;
 }
 
 
@@ -314,11 +315,18 @@ input[type=text], select {
 
 /* TITLES */
 
-div.body h1 { margin-top: 0; font-size: 200%; }
-div.body h2 { font-size: 160%; }
-div.body h3 { font-size: 140%; }
-div.body h4 { font-size: 120%; }
-div.body h5 { font-size: 110%; }
+div.body h1 { margin-top: 0;
+    font-size: 250%;
+    font-weight: 600;
+    border-bottom: none; }
+div.body h2 { font-size: 24px; }
+div.body h3 { font-size: 130%; }
+div.body h4 { font-size: 120%;
+ border-bottom: none;
+ padding-left: 5%;
+ text-color: gray; }
+div.body h5 { font-size: 110%;
+ border-bottom: none;}
 div.body h6 { font-size: 100%; }
 
 /* Admonition boxes */

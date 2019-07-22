@@ -3,6 +3,7 @@
 
 @import url("./fonts.css");
 @import url("./current.css");
+@import url("./mexico.css");
 
 
 /****** header******/
@@ -21,7 +22,7 @@ img.baselogo {
 }
 div.baselogo > a {
   
-    font-size: 23px;
+    font-size: 19px;
     
    
 }
@@ -39,8 +40,19 @@ div.logo img {
 
 /*****content******/
 
+a.headerlink {
+    color: lightslategray;
+    
+}
+
+
+a.headerlink:hover {
+    background-color: white !important;
+    color: orange;
+}
+
 div.content.inside {
-    margin: 0% 5% 0 10% !important;
+    margin: 0% 5%% 0 10% !important;
     padding-left: 15%;
     padding-right: 10%;
 }
@@ -54,10 +66,10 @@ div.sidebar {
 }
 
 div.sidebar {
-    margin: 0 0% 0 42% !important;
+    margin: 0 0% 0 53% !important;
 }
 div.sidebar.right {
-    margin: 0 0% 0 -39% !important;
+    margin: 0 0% 0 -60% !important;
 }
 
 div.sidebar.right:before {
@@ -94,12 +106,12 @@ div.sidebar.left h2:after {
 
 div.footer div.leftwrapper {
 
-    margin: 0% 8% 0 22%;
+    margin: 1% 8% 0 7%;
 }
 
 div.footer div.links {
     font-size: 1.1em;
-    margin-top: -3px;
+    margin-top: 15px;
 }
 
 
