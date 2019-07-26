@@ -87,6 +87,7 @@
   {%- endblock %}
 
   {%- block left_sidebar %}
+    
     <div class="sidebar left">
       {%- block sidebarlogo %}
       {%- if logo %}
@@ -114,17 +115,22 @@
   {%- endblock %} {# sidebarleft #}
 
   {%- block content %}
-  <div class="content">
+    <div class="content inside"> 
+      <div class="content">
     <div class="body" role="main">
       {% block body %} {% endblock %}
     </div>
   </div>
+        </div>
   {%- endblock %}
 
-  {%- block right_sidebar %}
-    <div class="sidebar right">
+  {%- block right_sidebar %}  
+  
+  <div class="sidebar right">
+    <div class="fixed-sidebar">
       <p class="caption">On this page</p>
       {{ toc }}
+      </div>
     </div>
   {%- endblock %}
 

@@ -3,3 +3,134 @@
 
 @import url("./fonts.css");
 @import url("./current.css");
+@import url("./mexico.css");
+
+
+/****** header******/
+
+div.header {
+    margin: 0 8% 0 7%;
+}
+
+
+
+
+/**** Header logo arrow search *****/
+
+img.baselogo {
+    width: 125px;
+}
+div.baselogo > a {
+  
+    font-size: 19px;
+    
+   
+}
+div.header > div.back-arrow img {
+    height: 30px;
+}
+
+/**** log ring****/
+
+div.logo img {
+    width: 133px;
+}
+
+
+
+/*****content******/
+
+a.headerlink {
+    color: lightslategray;
+    
+}
+
+
+a.headerlink:hover {
+    background-color: white !important;
+    color: orange;
+}
+
+div.content.inside {
+    margin: 0% 5%% 0 10% !important;
+    padding-left: 15%;
+    padding-right: 10%;
+}
+
+
+/***** side bar *****/
+
+div.sidebar {
+   
+    width: 74%;
+}
+
+div.sidebar {
+    margin: 0 0% 0 53% !important;
+}
+div.sidebar.right {
+    margin: 0 0% 0 -60% !important;
+}
+
+div.sidebar.right:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 66%;
+    border-left: 1px solid #CCCCCC;
+}
+div.logo p {
+    font-weight: 500;
+    font-size: 26px;
+   
+}
+
+div.sidebar.left h2 {
+    font-size: 1.4em;
+    margin: 15% 0% 12% 0%;
+}
+
+div.sidebar.left h2 > a {
+    color: black;
+}
+
+div.sidebar.left h2:after {
+
+    bottom: -13px;
+   
+}
+
+
+/**** fooooooooter ***/
+
+div.footer div.leftwrapper {
+
+    margin: 1% 8% 0 7%;
+}
+
+div.footer div.links {
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+
+img.baselogo.white {
+    width: 117px;
+}
+
+div.footer div.rightwrapper {
+    display: flex;
+    flex-grow: 1;
+    padding-right: 15px;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20%;
+    padding-top: 2%;
+}
+
+
+div.footer div.rightwrapper img.social {
+    margin: auto 12px;
+    width: 42%;
+}
