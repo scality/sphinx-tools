@@ -7,4 +7,5 @@ var DOCUMENTATION_OPTIONS = {
     HAS_SOURCE: true,
     SOURCELINK_SUFFIX: '.txt',
     NAVIGATION_WITH_KEYS: false,
+    KBlink: 'https://support.scality.com/hc/en-us',
 };
