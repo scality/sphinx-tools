@@ -8,7 +8,7 @@ var DOCUMENTATION_OPTIONS = {
     SOURCELINK_SUFFIX: '{{ sourcelink_suffix }}',
     NAVIGATION_WITH_KEYS: {{ 'true' if theme_navigation_with_keys|tobool else 'false'}},
     SEARCH_LANGUAGE_STOP_WORDS: {{ search_language_stop_words }},
-    KBLINK: {{ theme_kblink }}
+    KBLINK: '{{ theme_kblink }}'
 };
 
 
