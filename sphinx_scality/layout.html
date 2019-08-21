@@ -101,7 +101,6 @@
       <h2><a href="{{ pathto(pagename) }}">{{ title }}</a></h2>
       {%- endblock %} {# sidebartitle #}
 
-
       {%- block sidebarglobaltoc %}
       <div class="sidebar-nav">
         {{ toctree(
@@ -114,17 +113,21 @@
   {%- endblock %} {# sidebarleft #}
 
   {%- block content %}
-  <div class="content">
-    <div class="body" role="main">
+    <div class="content inside"> 
+     <div class="content">
+       <div class="body" role="main">
       {% block body %} {% endblock %}
+       </div>
+     </div>
     </div>
-  </div>
   {%- endblock %}
 
-  {%- block right_sidebar %}
-    <div class="sidebar right">
+  {%- block right_sidebar %}  
+  <div class="sidebar right">
+    <div class="fixed-sidebar">
       <p class="caption">On this page</p>
       {{ toc }}
+      </div>
     </div>
   {%- endblock %}
 
