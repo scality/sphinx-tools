@@ -289,9 +289,11 @@ var Search = {
         Search.stopPulse();
         Search.title.text(_('Search Results'));
         if (!resultCount)
-          Search.status.text(_('Your search did not match any documents. Please make sure that all words are spelled correctly and that you\'ve selected enough categories.'));
-        else
-            Search.status.text(_('Search finished, found %s page(s) matching the search query.').replace('%s', resultCount));
+        Search.status.html(_(`Your search did not match any documents. Try browsing the \
+        <a href="${KBLINK}">Knowledge Base</a> or contact Scality Support.`));
+      else
+          Search.status.html(_(`Found ${resultCount} page(s) matching the term(s) "<span class="term">${searchterms}</span>". Still not what you are\
+          looking for? Try browsing the <a href="${DOCUMENTATION_OPTIONS.KBLINK}">Knowledge Base</a> or contact Scality Support.`));
         Search.status.fadeIn(500);
       }
     }
