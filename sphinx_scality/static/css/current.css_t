@@ -271,3 +271,16 @@ div.footer div.rightwrapper img.social {
     color: {{ theme_termcolor }};
     font-weight: bold;
 }
+
+/*Search box*/
+input[type=text] {
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-image: url(../img/search-icon.png);
+    background-size: 35px 35px;
+    background-position: right;
+    background-repeat: no-repeat;
+    padding: 10px 20px 12px 30px;
+}
