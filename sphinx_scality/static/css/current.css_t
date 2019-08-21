@@ -265,3 +265,9 @@ div.footer div.rightwrapper {
 div.footer div.rightwrapper img.social {
     margin: auto 15px;
 }
+
+/*Search results*/
+.term {
+    color: {{ theme_termcolor }};
+    font-weight: bold;
+}
