@@ -18,8 +18,12 @@ body {
         "lsidebar content rsidebar"
         "footer footer footer";
     background-color: {{ theme_bgcolor }};
+    font-weight: 350;
 }
 
+p {
+    line-heigh: 1.3 rem;
+}
 
 /* Scality documentation logo */
 
@@ -53,6 +57,7 @@ div.header {
     background-color: {{ theme_headbgcolor }};
     color: {{ theme_headtextcolor }};
     padding: 20px 20px 10px;
+    margin: 0 8% 0 7%;
 }
 
 /* Quick fix for logo margin */
@@ -68,16 +73,33 @@ div.header > div.back-arrow img {
     height: 50px;
 }
 
+/* Header logo arrow */
+
+img.baselogo {
+    width: 125px;
+}
+
+div.baselogo > a {
+    font-size: 19px;
+}
+
+div.header > div.back-arrow img {
+    height: 30px;
+}
+
+div.logo img {
+    width: 133px;
+}
 
 /* SIDEBARS */
 
 /* Sidebars positioning */
 div.sidebar {
     position: relative;
-    margin: 0;
+    margin: 0 0% 0 53% 
     padding: 0 20px;
-    width: auto;
-    overflow: auto;
+    width: 74%;
+    overflow: visible;
     overflow-wrap: break-word;
     word-wrap: break-word;
     background-color: {{ theme_sidebarbgcolor }};
@@ -100,6 +122,7 @@ div.sidebar.left:before {
 
 div.sidebar.right {
     grid-area: rsidebar;
+    margin: 0 0% 0 -60%;
 }
 
 div.sidebar.right:before {
@@ -107,8 +130,14 @@ div.sidebar.right:before {
     position: absolute;
     top: 0;
     left: 0;
-    height: 30%;
+    height: 66%;
     border-left: 1px solid {{ theme_sidebarguttercolor }};
+}
+
+div.logo p {
+    font-weight: 500;
+    font-size: 26px;
+   
 }
 
 /* Left sidebar logo */
@@ -117,7 +146,6 @@ div.logo > a {
     flex-direction: column;
     align-items: center;
     margin: auto;
-    text-decoration: none;
 }
 
 div.logo img {
@@ -142,18 +170,17 @@ div.sidebar.left h2 {
 div.sidebar.left h2:after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -13px;
     left: 0;
     width: 100%;
     border-bottom: 1px solid {{ theme_sidebarguttercolor }};
 }
 
 div.sidebar.left h2 > a {
-    color: {{ theme_sidebarlinkcolor }};
+    color: {{ theme_headlinkcolor }};
 }
 
 div.sidebar.left h2 > a:hover {
-    text-decoration: none;
     color: {{ theme_headtextcolor }};
 }
 
@@ -179,7 +206,6 @@ div.sidebar-nav a {
 }
 
 div.sidebar-nav a:hover {
-    text-decoration: none;
     color: {{ theme_sidebarlinkactivecolor }};
 }
 
@@ -188,6 +214,11 @@ div.sidebar-nav a.current {
 }
 
 /* Right sidebar */
+div.fixed-sidebar{
+    position: sticky;
+    top: 10px;
+}
+
 div.sidebar.right p.caption {
     margin: 15px 10px;
     color: {{ theme_headtextcolor }};
@@ -198,7 +229,6 @@ div.sidebar.right a {
 }
 
 div.sidebar.right a:hover {
-    text-decoration: none;
     color: {{ theme_sidebarlinkactivecolor }};
 }
 
@@ -222,9 +252,30 @@ div.sidebar.right li {
 
 
 /* CONTENT */
+div.content.inside {
+    margin: 0% 5% 0 10%;
+    padding-left: 5%;
+    padding-right: 10%;
+}
 
 div.body {
     margin: 40px 20px;
+}
+
+/* LINKS */
+a:visited {
+    color: {{ theme_visitedlink }};
+    text-decoration: none;
+}
+
+a {
+    color: {{ theme_defaultlink }};
+    text-decoration: none;
+}
+
+a.headerlink:hover {
+    background-color: {{ theme_bgcolor }};
+    color: {{ theme_visitedlink }};
 }
 
 /* FOOTER */
@@ -247,23 +298,30 @@ div.footer div.leftwrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: 1% 8% 0 7%;
 }
 
 div.footer div.links {
-    font-size: 1.8em;
-    margin-top: -10px;
+    font-size: 1.1em;
+    margin-top: 15px;
 }
 
 div.footer div.rightwrapper {
     display: flex;
     flex-grow: 1;
-    padding-right: 15px;
     justify-content: flex-end;
     align-items: center;
+    padding-right: 20%;
+    padding-top: 2%;
 }
 
 div.footer div.rightwrapper img.social {
-    margin: auto 15px;
+    margin: auto -1px;
+    width: 29%;
+}
+
+img.baselogo.white {
+    width: 117px;
 }
 
 /*Search results*/
@@ -283,4 +341,105 @@ input[type=text] {
     background-position: right;
     background-repeat: no-repeat;
     padding: 10px 20px 12px 30px;
+}
+
+/* TITLES */
+
+div.body h1 {
+    margin-top: 0;
+    font-size: 250%;
+    font-weight: 600;
+    border-bottom: none;
+}
+
+div.body h2 {
+    font-size: 24px;
+}
+
+div.body h3 {
+    font-size: 130%;
+}
+
+div.body h4 {
+    font-size: 120%;
+    border-bottom: none;
+    padding-left: 5%;
+    text-color: gray;
+}
+
+div.body h5 {
+    font-size: 110%;
+    border-bottom: none;
+}
+
+div.body h6 {
+    font-size: 100%;
+}
+
+/* Admonition boxes */
+
+div.important {
+    background-color: {{ theme_importantboxbackground}};
+    border: 1px solid {{ theme_importantboxborder }};
+}
+
+div.tip {
+    background-color: {{ theme_tipboxbackground }};
+    border: 1px solid {{ theme_tipboxborder }};
+}
+
+div.note {
+    background-color: {{ theme_noteboxbackground }};
+    border: 1px solid {{ theme_noteboxborder }};
+}
+
+div.warning {
+    background-color: {{ theme_warningboxbackground }};
+    border: 1px solid {{ theme_warningboxborder }};
+}
+
+div.admonition.warning a:visited {
+    color: {{ theme_warningvisitedlink }};
+    text-decoration: none;
+}
+
+/* CODE */
+
+pre {
+    font-size: 90%;
+    font-family: Courier, "Courier New", monospace ; 
+    margin-top: 0pt;
+    color: {{ theme_codecolor }};
+    background-color: {{ theme_codebackgroundcolor }};
+    border: none;
+  }
+
+/* TABLES */
+
+table.docutils th {
+  background-color: #eaeaea;
+}
+
+table caption {
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+}
+
+table.docutils td, table.docutils th {
+    border-top: 1px solid #aaa;
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+    div.sidebar {
+        margin: 0 0% 0 27% !important;
+    }
+
+    div.sidebar.right {
+        margin: 0 0% 0 -30% !important;
+    }
+
+    div.content.inside {
+        padding-left: 7%; 
+    }
 }
