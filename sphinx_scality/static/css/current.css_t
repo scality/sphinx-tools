@@ -18,7 +18,7 @@ body {
         "lsidebar content rsidebar"
         "footer footer footer";
     background-color: {{ theme_bgcolor }};
-    font-weight: 350;
+    font-weight: {{ theme_bodyfontweight }};
 }
 
 p {
