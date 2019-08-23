@@ -36,6 +36,7 @@ div.baselogo > a {
 
 div.header div.baselogo > a {
     color: {{ theme_headtextcolor }};
+    text-decoration: none;
 }
 
 div.header div.baselogo > a:hover {
@@ -57,7 +58,7 @@ div.header {
     background-color: {{ theme_headbgcolor }};
     color: {{ theme_headtextcolor }};
     padding: 20px 20px 10px;
-    margin: 0 8% 0 7%;
+    margin: 0 5%;
 }
 
 /* Quick fix for logo margin */
@@ -96,9 +97,9 @@ div.logo img {
 /* Sidebars positioning */
 div.sidebar {
     position: relative;
-    margin: 0 0% 0 53% 
+    margin: 0;
     padding: 0 20px;
-    width: 74%;
+    width: auto;
     overflow: visible;
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -122,16 +123,15 @@ div.sidebar.left:before {
 
 div.sidebar.right {
     grid-area: rsidebar;
-    margin: 0 0% 0 -60%;
 }
 
 div.sidebar.right:before {
     content: '';
     position: absolute;
+    overflow
     top: 0;
     left: 0;
-    height: 66%;
-    border-left: 1px solid {{ theme_sidebarguttercolor }};
+    height: 30%;
 }
 
 div.logo p {
@@ -159,6 +159,7 @@ div.logo p {
     margin-block-start: 5px;
     margin-block-end: unset;
     color: {{ theme_sidebarlinkcolor }};
+    text-decoration: none;
 }
 
 /* Left sidebar title */
@@ -170,7 +171,7 @@ div.sidebar.left h2 {
 div.sidebar.left h2:after {
     content: '';
     position: absolute;
-    bottom: -13px;
+    bottom: 0;
     left: 0;
     width: 100%;
     border-bottom: 1px solid {{ theme_sidebarguttercolor }};
@@ -182,6 +183,7 @@ div.sidebar.left h2 > a {
 
 div.sidebar.left h2 > a:hover {
     color: {{ theme_headtextcolor }};
+    text-decoration: none;
 }
 
 /* Left sidebar navigation */
@@ -217,6 +219,7 @@ div.sidebar-nav a.current {
 div.fixed-sidebar{
     position: sticky;
     top: 10px;
+    border-left: 1px solid {{ theme_sidebarguttercolor }};
 }
 
 div.sidebar.right p.caption {
@@ -276,6 +279,7 @@ a {
 a.headerlink:hover {
     background-color: {{ theme_bgcolor }};
     color: {{ theme_visitedlink }};
+    text-decoration: none;
 }
 
 /* FOOTER */
@@ -302,13 +306,14 @@ div.footer div.leftwrapper {
 }
 
 div.footer div.links {
-    font-size: 1.1em;
-    margin-top: 15px;
+    font-size: 1.8em;
+    margin-top: -10px;
 }
 
 div.footer div.rightwrapper {
     display: flex;
     flex-grow: 1;
+    padding-right: 15px;
     justify-content: flex-end;
     align-items: center;
     padding-right: 20%;
@@ -316,7 +321,7 @@ div.footer div.rightwrapper {
 }
 
 div.footer div.rightwrapper img.social {
-    margin: auto -1px;
+    margin: auto 15px;
     width: 29%;
 }
 
@@ -431,15 +436,16 @@ table.docutils td, table.docutils th {
 }
 
 @media (min-width: 1025px) and (max-width: 1600px) {
-    div.sidebar {
-        margin: 0 0% 0 27% !important;
+    div.sidebar.left {
+        padding: 70px 0 0 70px;
     }
 
     div.sidebar.right {
-        margin: 0 0% 0 -30% !important;
+        margin: 10px;
     }
 
     div.content.inside {
-        padding-left: 7%; 
+        padding-left: 0;
+        margin: 20px;
     }
 }
