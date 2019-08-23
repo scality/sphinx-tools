@@ -382,28 +382,26 @@ div.body h6 {
 
 /* Admonition boxes */
 
-div.important {
-    background-color: {{ theme_boxbackground }};
-    border: 1px solid {{ theme_importantboxborder }};
+div.admonition {
+    background-color: {{ theme_boxbackground }};
     border-radius: 4px;
+    border: 1px solid black;
 }
 
-div.tip {
-    background-color: {{ theme_boxbackground }};
-    border: 1px solid {{ theme_tipboxborder }};
-    border-radius: 4px;
+div.admonition.important {
+    border-color: {{ theme_importantboxborder }};
 }
 
-div.note {
-    background-color: {{ theme_boxbackground }};
-    border: 1px solid {{ theme_noteboxborder }};
-    border-radius: 4px;
+div.admonition.tip {
+    border-color: {{ theme_tipboxborder }};
+}
+
+div.admonition.note {
+    border-color: {{ theme_noteboxborder }};
 }
 
 div.warning {
-    background-color: {{ theme_boxbackground }};
-    border: 1px solid {{ theme_warningboxborder }};
-    border-radius: 4px;
+    border-color: {{ theme_warningboxborder }};
 }
 
 div.admonition.warning a:visited {
