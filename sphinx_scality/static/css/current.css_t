@@ -22,7 +22,7 @@ body {
 }
 
 p {
-    line-heigh: 1.3 rem;
+    line-height: 1.3 rem;
 }
 
 /* Scality documentation logo */
@@ -128,7 +128,6 @@ div.sidebar.right {
 div.sidebar.right:before {
     content: '';
     position: absolute;
-    overflow
     top: 0;
     left: 0;
     height: 30%;
@@ -336,7 +335,7 @@ img.baselogo.white {
 }
 
 /*Search box*/
-input[type=text] {
+form#search-form > input[name=q] {
     width: 300px;
     box-sizing: border-box;
     border: 1px solid #ccc;
