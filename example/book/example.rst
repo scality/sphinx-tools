@@ -1,26 +1,77 @@
 Example section
 ===============
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et ante
+Lorem **ipsum dolor sit amet**, consectetur adipiscing elit. Pellentesque et ante
 in nisi efficitur tempus eget nec sapien. Nulla ac magna mattis, rutrum tortor
-ut, pretium libero. Ut elementum felis ac nisi tristique maximus. Sed ante
+ut, pretium libero. Ut *elementum felis ac nisi* tristique maximus. Sed ante
 enim, posuere a dictum id, varius laoreet velit. Donec vitae nibh tincidunt mi
-molestie vulputate sed fermentum ex. Integer in magna sagittis, tincidunt odio
+molestie vulputate sed fermentum ex. :file:`Integer in magna` sagittis, tincidunt odio
 non, pharetra justo. Sed mattis lorem nec magna aliquam, non bibendum neque
-viverra. Integer sed elementum eros, vel semper nunc. Proin quis lorem elit.
+viverra. ``Integer sed elementum`` eros, vel semper nunc. Proin quis lorem elit.
 Pellentesque in interdum ipsum.
 
 Example sub-section
 -------------------
 
-Phasellus posuere molestie mattis. In eu imperdiet lacus, sed mattis odio.
-Aenean sit amet condimentum orci, eu tristique urna. Suspendisse rutrum varius
-faucibus. Aenean at accumsan nunc, a placerat sapien. Aliquam mollis tellus
-arcu, at placerat velit finibus ut. Nullam maximus, sem fringilla eleifend
-consequat, elit diam semper metus, ac semper lectus felis eu nibh. Morbi et
-dolor lacinia, elementum ante a, porttitor enim. Vivamus feugiat eros lorem,
-sit amet laoreet nisi fringilla sed. Donec et pulvinar est. Lorem ipsum dolor
-sit amet, consectetur adipiscing elit. Praesent vitae volutpat nulla.
+.. code::
+
+   ring> brs2 decodeKey 634FAB251565ACF9634FAB000000004000000120
+
+   Key: 634FAB251565ACF9634FAB000000004000000120
+   Hash: 634FAB
+   Type: 1 / User
+   UserID (csum): 251565ACF9634FAB
+   ServiceID: 40
+   Class: 2
+   Replica: 0
+
+::
+
+   systemctl enable snmpd
+   systemctl start snmpd
+   systemctl enable scality-sagentd
+   systemctl start scality-sagentd
+
+.. note::
+   
+   arcu, at placerat velit finibus ut. Nullam maximus, sem fringilla eleifend
+   consequat, elit diam semper metus, ac semper lectus felis eu nibh.
+
+.. warning::
+
+   Morbi et dolor lacinia, elementum ante a, porttitor enim.
+   
+.. important::
+
+   Vivamus feugiat eros lorem, sit amet laoreet nisi fringilla sed.
+   
+.. tip::
+
+   Donec et pulvinar est. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+   Praesent vitae volutpat nulla.
+
+.. tabularcolumns:: lLl
+.. table::
+   :widths: auto
+
+   +--------------------+------------------------+---------+
+   |     Parameter      |      Description       | Default |
+   +====================+========================+=========+
+   | chordrepair_delay  | Timeout, in minutes,   | 1       |
+   |                    | between checks for     |         |
+   |                    | missing or corrupted   |         |
+   |                    | data.                  |         |
+   +--------------------+------------------------+---------+
+   | chordrepair_enable | Set to **1** to enable | 1       |
+   |                    | automatic disk         |         |
+   |                    | repair.                |         |
+   +--------------------+------------------------+---------+
+
+Title 3
+^^^^^^^
+
+Title 4
+*******
 
 Nunc at venenatis diam, quis finibus nulla. Phasellus varius tellus et rhoncus
 scelerisque. Vestibulum luctus tempus velit, id ornare erat rhoncus eget. In

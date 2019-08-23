@@ -39,3 +39,6 @@ venv.bak/
 
 # tox
 .tox/
+
+# macOS stuff
+.DS_Store

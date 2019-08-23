@@ -40,7 +40,7 @@
     {%- block scripts %}
       <script type="text/javascript" id="documentation_options"
               data-url_root="{{ pathto('', 1) }}"
-              src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
+              src="{{ pathto('_static/js/documentation_options.js', 1) }}"></script>
       {%- for scriptfile in script_files %}
       <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
       {%- endfor %}
@@ -101,7 +101,6 @@
       <h2><a href="{{ pathto(pagename) }}">{{ title }}</a></h2>
       {%- endblock %} {# sidebartitle #}
 
-
       {%- block sidebarglobaltoc %}
       <div class="sidebar-nav">
         {{ toctree(
@@ -114,17 +113,21 @@
   {%- endblock %} {# sidebarleft #}
 
   {%- block content %}
-  <div class="content">
-    <div class="body" role="main">
+    <div class="content-container"> 
+     <div class="content">
+       <div class="body" role="main">
       {% block body %} {% endblock %}
+       </div>
+     </div>
     </div>
-  </div>
   {%- endblock %}
 
-  {%- block right_sidebar %}
-    <div class="sidebar right">
+  {%- block right_sidebar %}  
+  <div class="sidebar right">
+    <div class="fixed-sidebar">
       <p class="caption">On this page</p>
       {{ toc }}
+      </div>
     </div>
   {%- endblock %}
 
