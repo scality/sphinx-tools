@@ -384,27 +384,30 @@ div.body h6 {
 /* Admonition boxes */
 
 div.important {
-    background-color: {{ theme_importantboxbackground}};
+    background-color: {{ theme_boxbackground }};
     border: 1px solid {{ theme_importantboxborder }};
+    border-radius: 4px;
 }
 
 div.tip {
-    background-color: {{ theme_tipboxbackground }};
+    background-color: {{ theme_boxbackground }};
     border: 1px solid {{ theme_tipboxborder }};
+    border-radius: 4px;
 }
 
 div.note {
-    background-color: {{ theme_noteboxbackground }};
+    background-color: {{ theme_boxbackground }};
     border: 1px solid {{ theme_noteboxborder }};
+    border-radius: 4px;
 }
 
 div.warning {
-    background-color: {{ theme_warningboxbackground }};
+    background-color: {{ theme_boxbackground }};
     border: 1px solid {{ theme_warningboxborder }};
+    border-radius: 4px;
 }
 
 div.admonition.warning a:visited {
-    color: {{ theme_warningvisitedlink }};
     text-decoration: none;
 }
 
