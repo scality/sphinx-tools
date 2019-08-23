@@ -290,7 +290,7 @@ var Search = {
         Search.title.text(_('Search Results'));
         if (!resultCount)
         Search.status.html(_(`Your search did not match any documents. Try browsing the \
-        <a href="${KBLINK}">Knowledge Base</a> or contact Scality Support.`));
+        <a href="${DOCUMENTATION_OPTIONS.KBLINK}">Knowledge Base</a> or contact Scality Support.`));
       else
           Search.status.html(_(`Found ${resultCount} page(s) matching the term(s) "<span class="term">${searchterms}</span>". Still not what you are\
           looking for? Try browsing the <a href="${DOCUMENTATION_OPTIONS.KBLINK}">Knowledge Base</a> or contact Scality Support.`));
