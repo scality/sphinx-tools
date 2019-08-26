@@ -219,6 +219,7 @@ div.fixed-sidebar{
     position: sticky;
     top: 10px;
     border-left: 1px solid {{ theme_sidebarguttercolor }};
+    font-size: 14px;
 }
 
 div.sidebar.right p.caption {
@@ -254,11 +255,6 @@ div.sidebar.right li {
 
 
 /* CONTENT */
-div.content-container {
-    margin: 0% 5% 0 10%;
-    padding-left: 5%;
-    padding-right: 10%;
-}
 
 div.body {
     margin: 40px 20px;
@@ -442,10 +438,5 @@ table.docutils td, table.docutils th {
 
     div.sidebar.right {
         margin: 10px;
-    }
-
-    div.content-container {
-        padding-left: 0;
-        margin: 20px;
     }
 }
