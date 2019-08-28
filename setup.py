@@ -23,10 +23,7 @@ setup(
         'sphinx_scality': [
             'theme.conf',
             '*.html',
-            'static/css/*.css',
-            'static/js/*.js',
-            'static/fonts/**/*.*',
-            'static/img/**/*.*',
+            'static/**/*',
         ]
     },
     entry_points={
