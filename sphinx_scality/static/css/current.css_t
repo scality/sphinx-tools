@@ -408,12 +408,22 @@ div.admonition.warning a:visited {
 
 pre {
     font-size: 90%;
-    font-family: Courier, "Courier New", monospace ; 
+    font-family: Courier, "Courier New", monospace; 
     margin-top: 0pt;
     color: {{ theme_codecolor }};
     background-color: {{ theme_codebackgroundcolor }};
     border: none;
   }
+
+.codeblock, pre.literal-block, .rst-content .literal-block, .rst-content pre.literal-block, div[class^='highlight'] {
+    display: block;
+    overflow: auto;
+    padding: 12px 12px;
+}
+
+.codeblock,div[class^='highlight'] {
+    padding: 0;
+}
 
 /* TABLES */
 
