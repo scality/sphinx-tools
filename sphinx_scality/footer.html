@@ -22,17 +22,10 @@
     </div>
   </div>
   <div class="rightwrapper">
-    <a href="https://www.linkedin.com/company/scality/">
-      <img class="social" src="{{ pathto('_static/img/social/linkedin.png', 1) }}" alt="LinkedIn"/>
+    {% for resource, url in theme_social_links %}
+    <a href="{{ url }}">
+      <img class="social" src="_static/img/social/{{ resource }}.png" alt="{{ resource }}"/>
     </a>
-    <a href="https://twitter.com/scality/">
-      <img class="social" src="{{ pathto('_static/img/social/twitter.png', 1) }}" alt="Twitter"/>
-    </a>
-    <a href="https://www.facebook.com/scality/">
-      <img class="social" src="{{ pathto('_static/img/social/facebook.png', 1) }}" alt="Facebook"/>
-    </a>
-    <a href="https://www.instagram.com/scalitylife/">
-      <img class="social" src="{{ pathto('_static/img/social/instagram.png', 1) }}" alt="Instagram"/>
-    </a>
+    {% endfor %}
   </div>
 </div>
