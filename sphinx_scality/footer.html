@@ -6,9 +6,9 @@
     </a></div>
     <div class="links">
       Scality, Inc. All rights reserved. |
-      <a href="https://support.scality.com/">Support</a> |
-      <a href="#">Privacy Policy</a> |
-      <a href="#">Training</a>
+      {% for name, url in theme_footer_links %}
+      <a href="{{ url }}">{{ name }}</a> |
+      {% endfor %}
     </div>
     <div class="copyright">
       {%- if hasdoc('copyright') %}
