@@ -24,7 +24,7 @@
   <div class="rightwrapper">
     {% for resource, url in theme_social_links %}
     <a href="{{ url }}">
-      <img class="social" src="_static/img/social/{{ resource }}.png" alt="{{ resource }}"/>
+      <img class="social" src="{{ pathto('_static/img/social/' + resource + '.png', 1) }}" alt="{{ resource }}"/>
     </a>
     {% endfor %}
   </div>
