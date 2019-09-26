@@ -413,9 +413,11 @@ pre {
     color: {{ theme_codecolor }};
     background-color: {{ theme_codebackgroundcolor }};
     border: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 
-.codeblock, pre.literal-block, .rst-content .literal-block, .rst-content pre.literal-block, div[class^='highlight'] {
+.codeblock, pre.literal-block, .rst-content .literal-block, .rst-content pre.literal-block {
     display: block;
     overflow: auto;
     padding: 12px 12px;
