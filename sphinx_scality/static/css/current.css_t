@@ -45,9 +45,8 @@ div.header div.baselogo > a:hover {
 }
 
 img.baselogo {
-    width: 200px;
+    width: 250px;
 }
-
 
 /* HEADER */
 
@@ -75,10 +74,6 @@ div.header > div.back-arrow img {
 }
 
 /* Header logo arrow */
-
-img.baselogo {
-    width: 125px;
-}
 
 div.baselogo > a {
     font-size: 19px;

@@ -1,18 +1,30 @@
 <div class="header">
-    <div class="baselogo"><a href="https://documentation.scality.com">
+    {% if html_home %}
+            <div class="baselogo"><a href="{{ html_home }}">
         <img class="baselogo"
-             src="{{ pathto('_static/img/scality-logo-black.svg', 1) }}"
+             src="{{ pathto('_static/img/scality-documentation.svg', 1) }}"
              alt="Logo"/>
-        <p>documentation</p>
     </a></div>
+    {% else %}
+    <div class="baselogo">
+        <img class="baselogo"
+             src="{{ pathto('_static/img/scality-documentation.svg', 1) }}"
+             alt="Logo">
+    </img>
+    </div>
+    {% endif %}
+
     <div class="quicksearch">
         {%- include "searchbox.html" %}
     </div>
+    {% if html_home %}
     <div class="back-arrow">
-        <a href="https://documentation.scality.com/{{ project_identifier }}/{{ version }}">
+        <a href="{{ html_home }}/{{ project_identifier }}/{{ version }}">
             <img class="back-arrow"
                  src="{{ pathto('_static/img/back-arrow.png', 1) }}"
-                 alt="Back to documentation"/>
+                 alt="Website home"/>
         </a>
     </div>
+    {% else %}
+    {% endif %}
 </div>
