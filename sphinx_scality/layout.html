@@ -92,7 +92,7 @@
       {%- if logo %}
         <div class="logo"><a href="{{ pathto(master_doc) }}">
           <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
-          <p>{{ version }}</p>
+          <p>{{ release if (release | default('')) != '' else version }}</p>
         </a></div>
       {%- endif %}
       {%- endblock %} {# sidebarlogo #}
