@@ -214,6 +214,16 @@ div.sidebar-nav a.current {
     color: {{ theme_sidebarlinkactivecolor }};
 }
 
+/* Left sidebar release info */
+div.sidebar.left div.sidebar-relinfo {
+    margin-top: 50px;
+}
+
+div.sidebar-relinfo .value {
+    font-family: Courier, "Courier New", monospace;
+    font-size: 85%;
+}
+
 /* Right sidebar */
 div.fixed-sidebar{
     position: sticky;

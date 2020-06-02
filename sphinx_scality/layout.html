@@ -92,7 +92,7 @@
       {%- if logo %}
         <div class="logo"><a href="{{ pathto(master_doc) }}">
           <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>
-          <p>{{ release if (release | default('')) != '' else version }}</p>
+          <p>{{ version }}</p>
         </a></div>
       {%- endif %}
       {%- endblock %} {# sidebarlogo #}
@@ -109,6 +109,15 @@
         ) }}
       </div>
       {%- endblock %} {# sidebarglobaltoc #}
+
+      {%- block sidebarreleaseinfo %}
+      {%- if release | default('') != '' %}
+      <div class="sidebar-relinfo">
+        {# TODO: add link to release notes and other hosted releases #}
+        <p>Release: <span class="value">{{ release }}</span></p>
+      </div>
+      {%- endif %}
+      {%- endblock %} {# sidebarreleaseinfo #}
     </div>
   {%- endblock %} {# sidebarleft #}
 
