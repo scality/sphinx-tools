@@ -311,7 +311,7 @@ div.footer div.leftwrapper {
 }
 
 div.footer div.links {
-    font-size: 1.8em;
+    font-size: 12px;
     margin-top: -10px;
 }
 
