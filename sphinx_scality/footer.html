@@ -1,14 +1,15 @@
+{%- set has_homelink = theme_homelink | default('') != '' -%}
 <div class="footer" role="contentinfo">
   <div class="leftwrapper">
-    {% if html_home %}
-    <div class="baselogo"><a href="{{ html_home }}">
-      <img class="baselogo" src="{{ pathto('_static/img/scality-documentation-white.svg', 1) }}" alt="Logo"/>
-    </a></div>
-    {% else %}
+
     <div class="baselogo">
-      <img class="baselogo" src="{{ pathto('_static/img/scality-documentation-white.svg', 1) }}" alt="Logo"/>
+      {%- if has_homelink %}<a href="{{ theme_homelink }}">{% endif %}
+      <img class="baselogo"
+           src="{{ pathto('_static/img/scality-documentation-white.svg', 1) }}"
+           alt="Logo"/>
+      {%- if has_homelink %}</a>{% endif %}
     </div>
-    {% endif %}
+
     <div class="links">
       Scality, Inc. All rights reserved. |
       {% for name, url in theme_footer_links %}
