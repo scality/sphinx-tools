@@ -53,9 +53,6 @@ project = 'Example RING Documentation'
 copyright = '2019, Scality Technical Publications'
 author = 'Scality Technical Publications'
 
-# Used for finding the project logo and defining some links
-project_identifier = 'RING'
-
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
@@ -110,7 +107,30 @@ html_theme = 'sphinx_scality'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'social_links': [
+        ("github", "https://www.github.com/scality/sphinx-tools"),
+        ("linkedin", "https://www.linkedin.com/company/scality/"),
+        ("twitter", "https://twitter.com/scality"),
+        ("instagram", "https://instagram.com/scalitylife"),
+        ("facebook", "https://www.facebook.com/scality/"),
+    ],
+    'footer_links': [
+        ("Support", "https://support.scality.com"),
+        ("Knowledge Base", "https://support.scality.com/hc/en-us"),
+        ("Training", "https://training.scality.com"),
+        ("Privacy Policy", "https://www.scality.com/privacy-policy/"),
+    ],
+    # If this is set, will be used as an additional suggestion for search
+    # results
+    'kblink': 'https://support.scality.com/hc/en-us',
+    # If the pages are hosted on a website, configure the link to go back to
+    'homelink': 'https://documentation.scality.com',
+    # This serves as an identifier of the project for which this doc is built
+    # It is used in the back-arrow link, computed as
+    # "<homelink>/<projectname>/<version>"
+    'projectname': 'RING',
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -122,12 +142,7 @@ html_last_updated_fmt = '%B %d, %Y'
 html_show_sphinx = False
 html_show_source = False
 
-html_logo = '_static/{}_logo.svg'.format(project_identifier)
-
-# Extra variables to pass to templates
-html_context = {
-    'project_identifier': project_identifier,
-}
+html_logo = '_static/RING_logo.svg'
 
 
 # -- Options for HTMLHelp output ------------------------------------------
@@ -188,6 +203,4 @@ texinfo_documents = [
      author, 'ExampleRINGDocumentation', 'One line description of project.',
      'Miscellaneous'),
 ]
-
-
 
