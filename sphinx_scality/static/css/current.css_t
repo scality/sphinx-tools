@@ -7,12 +7,19 @@ html {
     height: 100%;
 }
 
+{#- Account for optional back-arrow height #}
+{%- if theme_homelink | default('') != '' %}
+  {%- set header_height = '150px' %}
+{%- else %}
+  {%- set header_height = '120px' %}
+{%- endif %}
+
 body {
     width: 100%;
     min-height: 100%;
     display: grid;
     grid-template-columns: 300px auto 300px;
-    grid-template-rows: 200px auto 180px;
+    grid-template-rows: {{ header_height }} auto 180px;
     grid-template-areas:
         "header header header"
         "lsidebar content rsidebar"
@@ -67,10 +74,6 @@ div.header img.logo {
 
 div.header > div.quicksearch input[name="q"] {
     float: right;
-}
-
-div.header > div.back-arrow img {
-    height: 50px;
 }
 
 /* Header logo arrow */
