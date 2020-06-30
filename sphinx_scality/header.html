@@ -11,9 +11,9 @@
     <div class="quicksearch">
         {%- include "searchbox.html" %}
     </div>
-    {% if has_homelink %}
+    {% if theme_parentlink | default('') != '' %}
     <div class="back-arrow">
-        <a href="{{ theme_homelink }}/{{ theme_projectname }}/{{ version }}">
+        <a href="{{ theme_parentlink }}">
             <img class="back-arrow"
                  src="{{ pathto('_static/img/back-arrow.png', 1) }}"
                  alt="Website home"/>

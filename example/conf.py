@@ -126,10 +126,8 @@ html_theme_options = {
     'kblink': 'https://support.scality.com/hc/en-us',
     # If the pages are hosted on a website, configure the link to go back to
     'homelink': 'https://documentation.scality.com',
-    # This serves as an identifier of the project for which this doc is built
-    # It is used in the back-arrow link, computed as
-    # "<homelink>/<projectname>/<version>"
-    'projectname': 'RING',
+    # This is used for the back-arrow link
+    'parentlink': 'https://documentation.scality.com/RING/{}'.format(version),
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
