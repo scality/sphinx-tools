@@ -11,11 +11,12 @@
     </div>
 
     <div class="links">
-      Scality, Inc. All rights reserved. |
+      Scality, Inc. All rights reserved.
       {% for name, url in theme_footer_links %}
-      <a href="{{ url }}">{{ name }}</a> |
+      | <a href="{{ url }}">{{ name }}</a>
       {% endfor %}
     </div>
+
     <div class="copyright">
       {%- if hasdoc('copyright') %}
         {% trans path=pathto('copyright'), copyright=copyright|e %}&#169; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
@@ -26,11 +27,14 @@
         {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
       {%- endif %}
     </div>
+
   </div>
   <div class="rightwrapper">
     {% for resource, url in theme_social_links %}
     <a href="{{ url }}">
-      <img class="social" src="{{ pathto('_static/img/social/' + resource + '.png', 1) }}" alt="{{ resource }}"/>
+      <img class="social"
+           src="{{ pathto('_static/img/social/' + resource + '.png', 1) }}"
+           alt="{{ resource }}"/>
     </a>
     {% endfor %}
   </div>
