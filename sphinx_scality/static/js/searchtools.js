@@ -288,12 +288,30 @@ var Search = {
       else {
         Search.stopPulse();
         Search.title.text(_('Search Results'));
-        if (!resultCount)
-        Search.status.html(_(`Your search did not match any documents. Try browsing the \
-        <a href="${DOCUMENTATION_OPTIONS.KBLINK}">Knowledge Base</a> or contact Scality Support.`));
-      else
-          Search.status.html(_(`Found ${resultCount} page(s) matching the term(s) "<span class="term">${searchterms}</span>". Still not what you are\
-          looking for? Try browsing the <a href="${DOCUMENTATION_OPTIONS.KBLINK}">Knowledge Base</a> or contact Scality Support.`));
+
+        if (DOCUMENTATION_OPTIONS.KBLINK != "") {
+          kbLink = `<a href="${DOCUMENTATION_OPTIONS.KBLINK}">Knowledge Base</a>`
+          extraHint = ` Try browsing the ${kbLink} or contact Scality Support.`
+        } else {
+          extraHint = ""
+        }
+
+        if (!resultCount) {
+          Search.status.html(_(
+            `Your search did not match any documents.${extraHint}`
+          ));
+        } else {
+          matchTerms = searchterms.map(
+            term => `<span class="term">"${term}"</span>`
+          );
+          if (extraHint != "") {
+            extraHint = ` Still not what you are looking for?${extraHint}`
+          }
+          Search.status.html(_(
+            `Found ${resultCount} page(s) matching the term(s)
+            ${matchTerms.join(', ')}.${extraHint}`
+          ));
+        }
         Search.status.fadeIn(500);
       }
     }
