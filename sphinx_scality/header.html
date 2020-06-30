@@ -1,30 +1,23 @@
+{%- set has_homelink = theme_homelink | default('') != '' -%}
 <div class="header">
-    {% if html_home %}
-            <div class="baselogo"><a href="{{ html_home }}">
-        <img class="baselogo"
-             src="{{ pathto('_static/img/scality-documentation.svg', 1) }}"
-             alt="Logo"/>
-    </a></div>
-    {% else %}
     <div class="baselogo">
+        {%- if has_homelink %}<a href="{{ theme_homelink }}">{% endif %}
         <img class="baselogo"
-             src="{{ pathto('_static/img/scality-documentation.svg', 1) }}"
-             alt="Logo">
-    </img>
+             src="{{ pathto('_static/img/scality-documentation-white.svg', 1) }}"
+             alt="Logo"/>
+        {%- if has_homelink %}</a>{% endif %}
     </div>
-    {% endif %}
 
     <div class="quicksearch">
         {%- include "searchbox.html" %}
     </div>
-    {% if html_home %}
+    {% if has_homelink %}
     <div class="back-arrow">
-        <a href="{{ html_home }}/{{ project_identifier }}/{{ version }}">
+        <a href="{{ theme_homelink }}/{{ project_identifier }}/{{ version }}">
             <img class="back-arrow"
                  src="{{ pathto('_static/img/back-arrow.png', 1) }}"
                  alt="Website home"/>
         </a>
     </div>
-    {% else %}
     {% endif %}
 </div>

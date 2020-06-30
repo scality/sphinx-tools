@@ -56,9 +56,6 @@ author = 'Scality Technical Publications'
 # Used for finding the project logo and defining some links
 project_identifier = 'RING'
 
-# If the pages are hosted on a website, configure the link to go back
-html_home = 'https://documentation.scality.com'
-
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
@@ -112,6 +109,8 @@ html_theme_options = {
         ("Privacy Policy", "https://www.scality.com/privacy-policy/"),
     ],
     'kblink': 'https://support.scality.com/hc/en-us',
+    # If the pages are hosted on a website, configure the link to go back to
+    'homelink': 'https://documentation.scality.com',
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -129,7 +128,6 @@ html_logo = '_static/{}_logo.svg'.format(project_identifier)
 # Extra variables to pass to templates
 html_context = {
     'project_identifier': project_identifier,
-    'html_home': html_home,
 }
 
 
