@@ -291,7 +291,8 @@ var Search = {
 
         if (DOCUMENTATION_OPTIONS.KBLINK != "") {
           kbLink = `<a href="${DOCUMENTATION_OPTIONS.KBLINK}">Knowledge Base</a>`
-          extraHint = ` Try browsing the ${kbLink} or contact Scality Support.`
+          community = `<a href="https://support.scality.com/hc/en-us/community/topics">SOLVED Customer Community</a>`
+          extraHint = ` Try browsing the ${kbLink} or ask on ${community}. For urgent issues contact Scality Support.`
         } else {
           extraHint = ""
         }
