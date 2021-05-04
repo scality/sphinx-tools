@@ -111,12 +111,15 @@
       {%- endblock %} {# sidebarglobaltoc #}
 
       {%- block sidebarreleaseinfo %}
-      {%- if release | default('') != '' %}
       <div class="sidebar-relinfo">
-        {# TODO: add link to release notes and other hosted releases #}
+        {%- if release | default('') != '' %}
         <p>Release: <span class="value">{{ release }}</span></p>
+        {%- endif %}
+
+        {%- if theme_releasenoteslink | default('') != '' %}
+        <a href="{{ theme_releasenoteslink }}">Release Notes</a>
+        {%- endif %}
       </div>
-      {%- endif %}
       {%- endblock %} {# sidebarreleaseinfo #}
     </div>
   {%- endblock %} {# sidebarleft #}

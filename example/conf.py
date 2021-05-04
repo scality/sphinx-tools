@@ -128,6 +128,8 @@ html_theme_options = {
     'homelink': 'https://documentation.scality.com',
     # This is used for the back-arrow link
     'parentlink': 'https://documentation.scality.com/RING/{}'.format(version),
+    # Release notes
+    'releasenoteslink': 'https://en.wikipedia.org/wiki/Release_notes',
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
