@@ -36,7 +36,7 @@ p {
 
 div.baselogo > a {
     display: flex;
-    font-family: Roboto, sans-serif;
+    font-family: Arial;
     font-weight: 300;
     font-size: 28px;
 }
@@ -52,7 +52,7 @@ div.header div.baselogo > a:hover {
 }
 
 img.baselogo {
-    width: 250px;
+    width: 150px;
 }
 
 /* HEADER */
@@ -150,7 +150,7 @@ div.logo img {
 }
 
 div.logo p {
-    font-family: Oswald;
+    font-family: Arial;
     font-weight: 600;
     font-size: 30px;
     margin-block-start: 5px;
@@ -162,7 +162,7 @@ div.logo p {
 /* Left sidebar title */
 div.sidebar.left h2 {
     position: relative;
-    font-family: Oswald;
+    font-family: Arial;
 }
 
 div.sidebar.left h2:after {
@@ -361,16 +361,21 @@ div.body h1 {
 
 div.body h2 {
     font-size: 24px;
+    font-weight: 500;
+    padding-left: 3%;
 }
 
 div.body h3 {
     font-size: 130%;
+    font-weight: 500;
+    padding-left: 5%;
 }
 
 div.body h4 {
     font-size: 120%;
+    font-weight: 500;
     border-bottom: none;
-    padding-left: 5%;
+    padding-left: 7%;
     text-color: gray;
 }
 
