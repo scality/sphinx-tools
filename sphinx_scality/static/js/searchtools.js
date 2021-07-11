@@ -155,6 +155,7 @@ var Search = {
     // stem the searchterms and add them to the correct list
     var stemmer = new Stemmer();
     var searchterms = [];
+    var searchtermfull = [];
     var excluded = [];
     var hlterms = [];
     var tmp = splitQuery(query);
@@ -183,6 +184,7 @@ var Search = {
       }
       else {
         toAppend = searchterms;
+        searchtermfull.push(tmp[i].toLowerCase());
         hlterms.push(tmp[i].toLowerCase());
       }
       // only add if not already in the list
@@ -316,7 +318,7 @@ var Search = {
             `Your search did not match any documents.${extraHint}`
           ));
         } else {
-          matchTerms = searchterms.map(
+          matchTerms = searchtermfull.map(
             term => `<span class="term">"${term}"</span>`
           );
           if (extraHint != "") {
