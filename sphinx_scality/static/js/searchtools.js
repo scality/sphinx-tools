@@ -157,7 +157,8 @@ var Search = {
     var searchterms = [];
     var searchtermfull = [];
     var excluded = [];
-    var hlterms = [];
+    var exact_hlwords = [];
+    var partial_hlwords = [];
     var tmp = splitQuery(query);
     var objectterms = [];
     for (i = 0; i < tmp.length; i++) {
@@ -184,14 +185,20 @@ var Search = {
       }
       else {
         toAppend = searchterms;
-        searchtermfull.push(tmp[i].toLowerCase());
-        hlterms.push(tmp[i].toLowerCase());
+        if (!$u.contains(exact_hlwords, tmp[i].toLowerCase())) {
+          searchtermfull.push(tmp[i].toLowerCase());
+          exact_hlwords.push(tmp[i].toLowerCase());
+        }
+        if (!$u.contains(partial_hlwords, word) && !$u.contains(exact_hlwords, word)) {
+          partial_hlwords.push(word);
+        }
       }
       // only add if not already in the list
       if (!$u.contains(toAppend, word))
         toAppend.push(word);
     }
-    var highlightstring = '?highlight=' + $.urlencode(hlterms.join(" "));
+    var highlightstring = '?highlight_exact=' + $.urlencode(exact_hlwords.join(" "));
+    highlightstring += ' &highlight_partial=' + $.urlencode(partial_hlwords.join(" "));
 
     // console.debug('SEARCH: searching for:');
     // console.info('required: ', searchterms);
@@ -284,7 +291,7 @@ var Search = {
             complete: function (jqxhr, textstatus) {
               var data = jqxhr.responseText;
               if (data !== '' && data !== undefined) {
-                listItem.append(Search.makeSearchSummary(data, searchterms, hlterms));
+                listItem.append(Search.makeSearchSummary(data, searchterms, exact_hlwords, partial_hlwords));
               }
               Search.output.append(listItem);
               listItem.slideDown(5, function () {
@@ -493,7 +500,7 @@ var Search = {
    * words. the first one is used to find the occurrence, the
    * latter for highlighting it.
    */
-  makeSearchSummary: function (text, keywords, hlwords) {
+  makeSearchSummary: function (text, keywords, exact_hlwords, partial_hlwords) {
     var html = Search.rstToText(text)
     var htmlLower = html.toLowerCase();
     var start = 0;
@@ -507,9 +514,15 @@ var Search = {
       $.trim(html.substr(start, 240)) +
       ((start + 240 - html.length) ? '...' : '');
     var rv = $('<div class="context"></div>').text(excerpt);
-    $.each(hlwords, function () {
-      rv = rv.highlightText(this, 'highlighted');
+    $.each(exact_hlwords, function () {
+      rv = rv.highlightText(this, 'fullMatchHighlight');
     });
+    $.each(partial_hlwords, function () {
+      rv = rv.highlightText(this, 'partialMatchHighlight');
+    });
+
+
+
     return rv;
   }
 };

@@ -464,3 +464,21 @@ table.docutils td, table.docutils th {
         margin: 10px;
     }
 }
+
+/* Highlight */ 
+
+dt:target, span.partialMatchHighlight {
+    background-color: #fbe54e;
+}
+
+rect.fullMatchHighlight {
+    fill: #fbe54e;
+}
+
+dt:target, span.fullMatchHighlight {
+    background-color: #71fb4e;
+}
+
+rect.partialMatchHighlight {
+    fill: #71fb4e;
+}
