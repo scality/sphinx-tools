@@ -5,3 +5,6 @@
 @import url("./current.css");
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+
+@import url("../fontawesome/css/fontawesome.css");
+@import url("../fontawesome/css/solid.css");
