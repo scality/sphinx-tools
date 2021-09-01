@@ -418,20 +418,22 @@ div.admonition.warning a:visited {
 
 /* CODE */
 
-pre {
+pre, span.pre {
     font-size: 90%;
-    font-family: Courier, "Courier New", monospace; 
-    margin-top: 0pt;
+    font-family: "Fira Mono", monospace;
     color: {{ theme_codecolor }};
     background-color: {{ theme_codebackgroundcolor }};
     border: none;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
+}
+
+span.pre {
+    font-weight: bold;
+}
 
 .codeblock, pre.literal-block, .rst-content .literal-block, .rst-content pre.literal-block {
     display: block;
     overflow: auto;
+    margin-top: 0pt;
     padding: 12px 12px;
 }
 

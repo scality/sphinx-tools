@@ -1,5 +1,7 @@
 /* NOTE: we may want to remove these styles */
 @import url("../classic.css");
 
-@import url("./fonts.css");
+@import url("./command-block.css");
 @import url("./current.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');

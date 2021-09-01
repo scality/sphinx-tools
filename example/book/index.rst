@@ -6,3 +6,4 @@ Example book
    :caption: This is a book, here are its contents:
 
    example
+   commands
