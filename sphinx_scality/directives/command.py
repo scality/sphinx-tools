@@ -54,6 +54,7 @@ class CommandBlockDirective(SphinxDirective):
         )
         input_text_node += nodes.Text("\n".join(command))
         input_node += input_text_node
+        input_node += nodes.container(classes=["command-block__copy"])
         block_node += input_node
         if output:
             output_node = nodes.literal_block(
