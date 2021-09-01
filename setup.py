@@ -5,16 +5,17 @@ Includes a Sphinx theme and other Sphinx customizations.
 """
 from setuptools import setup
 
-from sphinx_scality import __version__
+with open('VERSION', encoding='utf-8') as f:
+    version = f.read()
 
 with open('README.md', encoding='utf-8') as f:
     readme_data = f.read()
 
 setup(
     name='sphinx_scality',
-    version=__version__,
+    version=version,
     author='Scality',
-    author_email='docs@scality.com',  # FIXME
+    author_email='docs@scality.com',
     description='Scality package for Sphinx (includes theme)',
     long_description=readme_data,
     zip_safe=False,
@@ -34,6 +35,7 @@ setup(
     install_requires=['sphinx'],
     classifiers=[
         'Framework :: Sphinx',
+        'Framework :: Sphinx :: Extension',
         'Framework :: Sphinx :: Theme',
         'Intended Audience :: Developers',
         'Programming Language :: Python :: 2.7',
