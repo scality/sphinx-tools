@@ -25,44 +25,6 @@
     position: relative;
 }
 
-.command-block__copy {
-    position: absolute;
-    display: flex;
-    top: .6rem;
-    right: .6rem;
-    gap: .3rem;
-    opacity: .4;
-}
-.command-block__copy:hover {
-    opacity: .7;
-}
-.command-block__copy--success .command-block__copy-button {
-    color: #4a6b06;
-}
-.command-block__copy--success .command-block__copy-tooltip {
-    background-color: #4a6b06;
-}
-.command-block__copy--error .command-block__copy-button {
-    color: #762b14;
-}
-.command-block__copy--error .command-block__copy-tooltip {
-    background-color: #762b14;
-}
-
-.command-block__copy-button {
-    width: 2ch;
-    color: {{ theme_codecolor }};
-}
-
-.command-block__copy-tooltip {
-    font-size: .8rem;
-    background: {{ theme_codecolor }};
-    padding: .2rem;
-    border-radius: .2rem;
-    color: {{ theme_codebackgroundcolor }};
-    display: none;
-}
-
 .command-block__output {
     grid-area: output;
 }
