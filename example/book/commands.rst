@@ -33,3 +33,14 @@ a custom one can be provided:
    :language: rst
 
 .. include:: example_commands/custom-separator.rst
+
+Flat Content to Copy
+--------------------
+
+Sometimes, we want to simply provide content for a user to copy, which is not
+some command. For this, we add a ``copy-block`` directive, used as follows:
+
+.. literalinclude:: example_commands/copy-block.rst
+   :language: rst
+
+.. include:: example_commands/copy-block.rst
