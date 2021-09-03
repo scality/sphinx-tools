@@ -35,27 +35,36 @@ class CommandBlockDirective(SphinxDirective):
                     )
                 output.append(line)
 
+        # Prompt is a div.literal_block, with "console" highlighting
         prompt = self.options.get("prompt", self.config.command_block_default_prompt)
-
-        # block_node = command_block()
-        block_node = nodes.container(
-            classes=["command-block"], ids=[f"command-block-{self.arguments[0]}"]
-        )
-        # block_node += command_prompt(prompt)
         prompt_node = nodes.literal_block(
             language="console", classes=["command-block__prompt"]
         )
         prompt_node += nodes.Text(prompt)
-        block_node += prompt_node
-        # block_node += command_input("\n".join(command))
+
+        # Input is the command to copy, where the text itself is a div.literal_block
+        # with "shell" highlighting
         input_node = nodes.container(classes=["command-block__input"])
         input_text_node = nodes.literal_block(
             language="shell", classes=["command-block__input-text"]
         )
         input_text_node += nodes.Text("\n".join(command))
         input_node += input_text_node
+        # Add a placeholder for a copy button
         input_node += nodes.container(classes=["command-block__copy"])
-        block_node += input_node
+
+        # Group prompt and input in a container
+        command_node = nodes.container(classes=["command-block__command"])
+        command_node += prompt_node
+        command_node += input_node
+
+        # Wrap the command in a container
+        block_node = nodes.container(
+            classes=["command-block"], ids=[f"command-block-{self.arguments[0]}"]
+        )
+        block_node += command_node
+
+        # Optionally add an output div.literal_block without highlighting
         if output:
             output_node = nodes.literal_block(
                 language="none", classes=["command-block__output"]
