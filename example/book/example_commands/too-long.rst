@@ -1,8 +1,10 @@
 .. command-block:: too-long
    :prompt: [root@long-hostname ~/scripts]#
 
-   ./lorem.sh
+   ./lorem.sh --title "Sooooooooooooooooooooooooooooomething reaaaaaaaaaaaaaaaaaaaaaaaaally loooooooooooooong"
    ---
+   # Sooooooooooooooooooooooooooooomething reaaaaaaaaaaaaaaaaaaaaaaaaally loooooooooooooong
+
    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
    Maecenas mattis eu nulla quis ultrices.
    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
