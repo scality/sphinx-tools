@@ -52,6 +52,7 @@
     font-size: .8rem;
     background: {{ theme_codecolor }};
     padding: .2rem;
+    margin-top: -.2rem;
     border-radius: .2rem;
     color: {{ theme_codebackgroundcolor }};
     display: none;
