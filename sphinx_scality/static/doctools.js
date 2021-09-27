@@ -75,32 +75,17 @@ jQuery.fn.highlightText = function (text, className) {
         !jQuery(node.parentNode).hasClass("partialMatchHighlight") &&
         !jQuery(node.parentNode).hasClass("fullMatchHighlight") &&
         !jQuery(node.parentNode).hasClass("nohighlight")) {
-        var span;
-        var isInSVG = jQuery(node).closest("body, svg, foreignObject").is("svg");
-        if (isInSVG) {
-          span = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
-        } else {
-          span = document.createElement("span");
-          span.className = className;
-        }
+
+        var span = document.createElement("span");
+        span.className = className;
         span.appendChild(document.createTextNode(val.substr(pos, text.length)));
+
         node.parentNode.insertBefore(span, node.parentNode.insertBefore(
           document.createTextNode(val.substr(pos + text.length)),
           node.nextSibling));
+
+
         node.nodeValue = val.substr(0, pos);
-        if (isInSVG) {
-          var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-          var bbox = node.parentElement.getBBox();
-          rect.x.baseVal.value = bbox.x;
-          rect.y.baseVal.value = bbox.y;
-          rect.width.baseVal.value = bbox.width;
-          rect.height.baseVal.value = bbox.height;
-          rect.setAttribute('class', className);
-          addItems.push({
-            "parent": node.parentNode,
-            "target": rect
-          });
-        }
       }
     }
     else if (!jQuery(node).is("button, select, textarea")) {

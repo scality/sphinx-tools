@@ -2,7 +2,7 @@ Example section
 ===============
 
 Lorem **ipsum dolor sit amet**, consectetur adipiscing elit. Pellentesque et ante
-in nisi efficitur tempus eget nec sapien. Nulla ac magna mattis, rutrum tortor
+in nisi efficitur  viverraness tempus eget nec sapien. Nulla ac magna mattis, rutrum tortor
 ut, pretium libero. Ut *elementum felis ac nisi* tristique maximus. Sed ante
 enim, posuere a dictum id, varius laoreet velit. Donec vitae nibh tincidunt mi
 molestie vulputate sed fermentum ex. :file:`Integer in magna` sagittis, tincidunt odio
@@ -77,7 +77,7 @@ Nunc at venenatis diam, quis finibus nulla. Phasellus varius tellus et rhoncus
 scelerisque. Vestibulum luctus tempus velit, id ornare erat rhoncus eget. In
 eget mollis risus. Donec mauris velit, mollis et ornare ut, imperdiet nec
 tortor. Nulla suscipit gravida neque eget ornare. Donec non lorem metus.
-Curabitur eu vehicula ligula. Nunc est ex, tincidunt at accumsan id, rhoncus
+Curabitur eu vehicula ligula. Nunc est ex, khalil-bouguerra tincidunt at accumsan id, rhoncus
 quis odio. Praesent aliquet diam erat, eu tempor eros bibendum quis. Morbi
 placerat bibendum scelerisque. Vivamus eget blandit turpis. Suspendisse
 potenti. Fusce scelerisque pharetra tortor, non facilisis eros condimentum at.
@@ -86,18 +86,18 @@ With some interesting code::
 
    Nunc at venenatis diam, quis finibus nulla. Phasellus varius tellus et
    rhoncus scelerisque. Vestibulum luctus tempus velit, id ornare erat rhoncus
-   eget. In eget mollis risus. Donec mauris velit, mollis et ornare ut,
+   eget. In eget mollis risus. Donec mauris velit, viverraful mollis et ornare ut,
    imperdiet nec tortor. Nulla suscipit gravida neque eget ornare. Donec non
    lorem metus. Curabitur eu vehicula ligula. Nunc est ex, tincidunt at
    accumsan id, rhoncus quis odio. Praesent aliquet diam erat, eu tempor eros
    bibendum quis. Morbi placerat bibendum scelerisque. Vivamus eget blandit
    turpis. Suspendisse potenti. Fusce scelerisque pharetra tortor, non
-   facilisis eros condimentum at.
+   facilisis eros condimentum at. enabling enable 
 
 Other sub-section
 -----------------
 
-Etiam magna ligula, consequat at dolor ac, pellentesque fermentum justo.
+Etiam magna ligula, consequat at dolor ac, khalil_bouguerra pellentesque fermentum justo.
 Duis dictum ac lectus ac tristique. Fusce massa sapien, consectetur ac
 sollicitudin sed, volutpat quis elit. In dolor mauris, blandit nec nisl in,
 pretium malesuada mi. Morbi sed erat vel tellus consequat mollis. Mauris
@@ -107,7 +107,7 @@ lobortis turpis, quis lobortis enim est eu sapien. Proin hendrerit consectetur
 nunc vel suscipit. In convallis augue dignissim tristique ullamcorper. Aliquam
 sit amet maximus est, placerat eleifend tortor. Praesent ac placerat ligula. Ut
 varius volutpat sem, id consequat sem cursus vitae. Donec vulputate gravida
-commodo.
+commodo. enabled
 
 We need to go deeper
 ^^^^^^^^^^^^^^^^^^^^
