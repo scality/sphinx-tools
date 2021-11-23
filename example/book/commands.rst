@@ -10,7 +10,13 @@ Here is how to define a command:
 
 And this is how it would render:
 
-.. include:: example_commands/basic.rst
+.. container:: toggle
+
+   .. container:: collapsible
+
+      Show/hide Code
+
+   .. include:: example_commands/basic.rst
 
 Overflow Example
 ----------------
@@ -32,7 +38,13 @@ a custom one can be provided:
 .. literalinclude:: example_commands/custom-separator.rst
    :language: rst
 
-.. include:: example_commands/custom-separator.rst
+.. container:: toggle
+
+   .. container:: collapsible
+
+      Show/hide code
+
+   .. include:: example_commands/custom-separator.rst
 
 Flat Content to Copy
 --------------------

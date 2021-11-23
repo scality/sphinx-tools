@@ -38,4 +38,17 @@
     </a>
     {% endfor %}
   </div>
+
+ <!--This script enables the expland/collapse on any block--> 
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .collapsible").show();
+        $(".toggle .collapsible").click(function() {
+            $(this).parent().children().not(".collapsible").toggle(400);
+            $(this).parent().children(".collapsible").toggleClass("open");
+        })
+    });
+</script>
 </div>

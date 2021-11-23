@@ -10,6 +10,27 @@ non, pharetra justo. Sed mattis lorem nec magna aliquam, non bibendum neque
 viverra. ``Integer sed elementum`` eros, vel semper nunc. Proin quis lorem elit.
 Pellentesque in interdum ipsum.
 
+Example custom extension
+------------------------
+
+.. container:: toggle
+
+    .. container:: collapsible
+
+        Show/Hide Code
+
+    .. code::
+
+         ring> brs2 decodeKey 634FAB251565ACF9634FAB000000004000000120
+
+         Key: 634FAB251565ACF9634FAB000000004000000120
+         Hash: 634FAB
+         Type: 1 / User
+         UserID (csum): 251565ACF9634FAB
+         ServiceID: 40
+         Class: 2
+         Replica: 0
+
 Example sub-section
 -------------------
 

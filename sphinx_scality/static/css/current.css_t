@@ -484,3 +484,50 @@ dt:target, span.fullMatchHighlight {
 rect.partialMatchHighlight {
     fill: #71fb4e;
 }
+
+/* CSS for expandable/collapsible code blocks*/
+
+.toggle .collapsible {
+    display: block;
+    clear: both;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.toggle .collapsible::before {
+    content: '▶';
+    color: black;
+}
+
+.toggle .collapsible.open::before {
+    content: '▼';
+    color: black;
+}
+
+div.collapsible.docutils.container{
+    padding: 10px;
+}
+
+div.collapsible.docutils.container > p {
+    display: inline;
+}
+
+div.toggle.docutils.container {
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+
+div.collapsible.docutils.container.open{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+div.command-block.docutils.container {
+
+    margin: 0.3em 0 !important;
+}
