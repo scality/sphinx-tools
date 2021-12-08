@@ -204,3 +204,6 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
+html_context={
+    "feedback":True,
+}
