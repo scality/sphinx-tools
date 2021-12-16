@@ -10,6 +10,16 @@ non, pharetra justo. Sed mattis lorem nec magna aliquam, non bibendum neque
 viverra. ``Integer sed elementum`` eros, vel semper nunc. Proin quis lorem elit.
 Pellentesque in interdum ipsum.
 
+Example section with a clickable thumbnail image
+------------------------------------------------
+
+This thumbnail was created with `sphinxcontrib-images <https://sphinxcontrib-images.readthedocs.io/>`_.
+
+.. thumbnail:: ../_images/Storage_Services_unavailable.png
+   :width: 300px
+   :align: center
+
+
 Example sub-section
 -------------------
 
