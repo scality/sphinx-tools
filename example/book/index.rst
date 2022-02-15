@@ -7,3 +7,4 @@ Example book
 
    example
    commands
+   tabs

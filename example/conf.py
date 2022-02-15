@@ -33,8 +33,11 @@ import subprocess
 # ones.
 extensions = [
     'sphinx.ext.todo',
-    'sphinx.ext.ifconfig'
+    'sphinx.ext.ifconfig',
+    'sphinx_tabs.tabs'
 ]
+
+sphinx_tabs_disable_tab_closing = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -143,7 +146,6 @@ html_show_sphinx = False
 html_show_source = False
 
 html_logo = '_static/RING_logo.svg'
-
 
 # -- Options for HTMLHelp output ------------------------------------------
 
