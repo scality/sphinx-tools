@@ -34,7 +34,9 @@ import subprocess
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.ifconfig',
-    'sphinx_tabs.tabs'
+    'sphinx_tabs.tabs',
+    'sphinx_panels',
+    'sphinxcontrib.images'
 ]
 
 sphinx_tabs_disable_tab_closing = True

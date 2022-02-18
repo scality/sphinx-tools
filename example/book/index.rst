@@ -7,4 +7,4 @@ Example book
 
    example
    commands
-   tabs
+   sample_topic
