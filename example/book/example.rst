@@ -10,6 +10,12 @@ non, pharetra justo. Sed mattis lorem nec magna aliquam, non bibendum neque
 viverra. ``Integer sed elementum`` eros, vel semper nunc. Proin quis lorem elit.
 Pellentesque in interdum ipsum.
 
+Example image LightBox
+----------------------
+
+.. thumbnail:: ../_static/todd.gif
+   :width: 200px
+
 Example sub-section
 -------------------
 

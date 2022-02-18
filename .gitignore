@@ -23,7 +23,7 @@ wheels/
 MANIFEST
 
 # Sphinx documentation
-example/
+example/_build/
 
 # Environments
 .env
