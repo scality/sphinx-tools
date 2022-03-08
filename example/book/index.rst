@@ -7,4 +7,6 @@ Example book
 
    example
    commands
-   sample_topic
+   sample_topic_1tab_1method
+   sample_topic_1tab_1step
+   sample_topic_1dropdown_1method
