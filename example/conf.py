@@ -33,8 +33,13 @@ import subprocess
 # ones.
 extensions = [
     'sphinx.ext.todo',
-    'sphinx.ext.ifconfig'
+    'sphinx.ext.ifconfig',
+    'sphinx_tabs.tabs',
+    'sphinx_panels',
+    'sphinxcontrib.images'
 ]
+
+sphinx_tabs_disable_tab_closing = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

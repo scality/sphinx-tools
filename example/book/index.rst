@@ -7,3 +7,5 @@ Example book
 
    example
    commands
+   conflict
+   noconflict
