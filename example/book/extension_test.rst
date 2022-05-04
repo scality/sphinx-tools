@@ -15,7 +15,8 @@ Lightbox Image with Sphinxcontrib-images
     :width: 300px
     :align: center
 
- 
+    
+
 .. dropdown:: Syntax
 
     .. code-block:: rst
