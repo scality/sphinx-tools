@@ -84,7 +84,7 @@ else:
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -129,7 +129,7 @@ html_theme_options = {
     # If the pages are hosted on a website, configure the link to go back to
     'homelink': 'https://documentation.scality.com',
     # This is used for the back-arrow link
-    'parentlink': 'https://documentation.scality.com/RING/{}'.format(version),
+#   'parentlink': 'https://documentation.scality.com/RING/{}'.format(version),
     # Release notes
     'releasenoteslink': 'https://en.wikipedia.org/wiki/Release_notes',
 }
