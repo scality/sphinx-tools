@@ -11,7 +11,7 @@ html {
 {%- if theme_homelink | default('') != '' %}
   {%- set header_height = '150px' %}
 {%- else %}
-  {%- set header_height = '125px' %}
+  {%- set header_height = '120px' %}
 {%- endif %}
 
 body {
@@ -35,7 +35,7 @@ p {
 /* Scality documentation logo */
 
 div.baselogo > a {
-
+    display: flex;
     font-family: Arial, sans-serif;
     font-weight: 300;
     font-size: 28px;

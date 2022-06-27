@@ -129,7 +129,7 @@ html_theme_options = {
     # If the pages are hosted on a website, configure the link to go back to
     'homelink': 'https://documentation.scality.com',
     # This is used for the back-arrow link
-#   'parentlink': 'https://documentation.scality.com/RING/{}'.format(version),
+    'parentlink': 'https://documentation.scality.com/RING/{}'.format(version),
     # Release notes
     'releasenoteslink': 'https://en.wikipedia.org/wiki/Release_notes',
 }
