@@ -1,10 +1,9 @@
-Example book
-============
+Example Documentation
+=====================
 
 .. toctree::
    :maxdepth: 2
    :caption: This is a book, here are its contents:
 
    example
-   commands
    extension_test

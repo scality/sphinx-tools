@@ -35,7 +35,8 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.ifconfig',
     'sphinxcontrib.images',
-    'sphinx_design'
+    'sphinx_design',
+    'sphinx_copybutton'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -103,35 +104,35 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_scality'
+html_theme = 'furo'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
 html_theme_options = {
-    'social_links': [
-        ("github", "https://www.github.com/scality/sphinx-tools"),
-        ("linkedin", "https://www.linkedin.com/company/scality/"),
-        ("twitter", "https://twitter.com/scality"),
-        ("instagram", "https://instagram.com/scalitylife"),
-        ("facebook", "https://www.facebook.com/scality/"),
-    ],
-    'footer_links': [
-        ("Support", "https://support.scality.com"),
-        ("Knowledge Base", "https://support.scality.com/hc/en-us"),
-        ("Training", "https://training.scality.com"),
-        ("Privacy Policy", "https://www.scality.com/privacy-policy/"),
-    ],
-    # If this is set, will be used as an additional suggestion for search
-    # results
-    'kblink': 'https://support.scality.com/hc/en-us',
-    # If the pages are hosted on a website, configure the link to go back to
-    'homelink': 'https://documentation.scality.com',
-    # This is used for the back-arrow link
-    'parentlink': 'https://documentation.scality.com/RING/{}'.format(version),
-    # Release notes
-    'releasenoteslink': 'https://en.wikipedia.org/wiki/Release_notes',
+#    'social_links': [
+#        ("github", "https://www.github.com/scality/sphinx-tools"),
+#        ("linkedin", "https://www.linkedin.com/company/scality/"),
+#        ("twitter", "https://twitter.com/scality"),
+#        ("instagram", "https://instagram.com/scalitylife"),
+#        ("facebook", "https://www.facebook.com/scality/"),
+#    ],
+#    'footer_links': [
+#        ("Support", "https://support.scality.com"),
+#        ("Knowledge Base", "https://support.scality.com/hc/en-us"),
+#        ("Training", "https://training.scality.com"),
+#        ("Privacy Policy", "https://www.scality.com/privacy-policy/"),
+#    ],
+#    # If this is set, will be used as an additional suggestion for search
+#    # results
+#    'kblink': 'https://support.scality.com/hc/en-us',
+#    # If the pages are hosted on a website, configure the link to go back to
+#    'homelink': 'https://documentation.scality.com',
+#    # This is used for the back-arrow link
+#    'parentlink': 'https://documentation.scality.com/RING/{}'.format(version),
+#    # Release notes
+#    'releasenoteslink': 'https://en.wikipedia.org/wiki/Release_notes',
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
