@@ -499,7 +499,7 @@ rect.partialMatchHighlight {
     --sd-fontsize-tabs-label: 1rem;
 } */
 
-/* ARTESCA COLOR SET*/
+/* ARTESCA COLOR SET
 
 :root {
     --sd-color-tabs-label-active: #005357 !important;
@@ -512,4 +512,4 @@ rect.partialMatchHighlight {
     --sd-color-tabs-underline: rgb(222, 222, 222) !important;
     --sd-fontsize-tabs-label: 1rem;
 }
-
+*/
