@@ -38,6 +38,8 @@
     {%- endif %}
 
     {%- block scripts %}
+    <script src="{{ pathto('_static/js/jquery.js', resource=True) }}"></script>
+    <script src="{{ pathto('_static/js/underscore.js', resource=True) }}"></script>
       {%- if feedback %}
       <script type="text/javascript"
               data-url_root="{{ pathto('', 1) }}"
