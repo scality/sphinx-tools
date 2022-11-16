@@ -137,6 +137,12 @@ div.logo p {
    
 }
 
+/* Release notes */
+
+p.rn-title {
+    font-weight: bold;
+}
+
 /* Left sidebar logo */
 div.logo > a {
     display: flex;
