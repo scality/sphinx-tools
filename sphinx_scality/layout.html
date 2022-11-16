@@ -125,8 +125,9 @@
         <p>Release: <span class="value">{{ release }}</span></p>
         {%- endif %}
 
-        {%- if theme_releasenoteslink | default('') != '' %}
-        <a href="{{ theme_releasenoteslink }}">Release Notes</a>
+        {%- if theme_releasenoteslinkhtml | default('') != '' %}
+        <p class="rn-title">Release Notes</p>
+        <a href="{{ theme_releasenoteslinkhtml }}">HTML</a> | <a href="{{ theme_releasenoteslinkpdf }}">PDF</a>
         {%- endif %}
       </div>
       {%- endblock %} {# sidebarreleaseinfo #}

@@ -131,7 +131,8 @@ html_theme_options = {
     # This is used for the back-arrow link
     'parentlink': 'https://documentation.scality.com/RING/{}'.format(version),
     # Release notes
-    'releasenoteslink': 'https://en.wikipedia.org/wiki/Release_notes',
+    'releasenoteslinkpdf': 'https://en.wikipedia.org/wiki/Release_notes',
+    'releasenoteslinkhtml': 'https://confluence.atlassian.com/jirasoftware/jira-software-release-notes-776821069.html',
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
