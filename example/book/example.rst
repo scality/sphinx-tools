@@ -13,7 +13,23 @@ Pellentesque in interdum ipsum.
 Example sub-section
 -------------------
 
-.. code::
+.. code-block:: HTML
+
+   <div class="lb-dataContainer">
+      <div class="lb-data">
+         <div class="lb-details">
+            <span class="lb-caption">
+            </span>
+            <span class="lb-number">
+            </span>
+         </div>
+         <div class="lb-closeContainer">
+         <a class="lb-close">
+         </a>
+      </div>
+   </div>
+
+.. code-block::
 
    ring> brs2 decodeKey 634FAB251565ACF9634FAB000000004000000120
 

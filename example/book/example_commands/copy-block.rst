@@ -1,4 +1,3 @@
-.. copy-block:: some-block-to-copy
-   :language: python
+.. code-block::
 
    print("Hello, world!")
