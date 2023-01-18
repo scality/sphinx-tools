@@ -1,4 +1,4 @@
-.. code-block::
+.. command-block:: aaa
 
    ./lorem.sh --title "Sooooooooooooooooooooooooooooomething reaaaaaaaaaaaaaaaaaaaaaaaaally loooooooooooooong"
    ---

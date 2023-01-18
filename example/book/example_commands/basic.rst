@@ -1,5 +1,5 @@
-.. code-block::
-
+.. command-block:: test-command
+    
    ./echo-args.sh --stdout \
        me \
        you \
