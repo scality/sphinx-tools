@@ -1,10 +1,11 @@
 .command-block {
     display: flex;
     flex-direction: column;
-    background-color: {{ theme_codebackgroundcolor }};
+    background-color: var(--md-code-bg-color);
     margin: 1.33em 0;
     padding: 0.33em;
 }
+
 /* Remove default browser and "basic" theme styles */
 .command-block pre, .command-block div[class*="highlight-"] {
     margin: 0;
@@ -16,13 +17,18 @@
 }
 
 .command-block__prompt {
-    font-size: .9rem;
+    font-size: .8rem;
 }
 
 .command-block__input {
     flex-grow: 1;
     position: relative;
     overflow-y: auto;
+}
+
+.command-block__input code {
+    margin-left: 0px;
+    padding-left: 0px;
 }
 
 .command-block__output {
@@ -33,4 +39,8 @@
 }
 .command-block__output pre, .command-block__output .highlight {
     background: none;
+}
+
+.command-block__prompt button, .command-block__output button {
+    display: none;
 }

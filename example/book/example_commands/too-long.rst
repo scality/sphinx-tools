@@ -1,5 +1,4 @@
-.. command-block:: too-long
-   :prompt: [root@long-hostname ~/scripts]#
+.. command-block:: aaa
 
    ./lorem.sh --title "Sooooooooooooooooooooooooooooomething reaaaaaaaaaaaaaaaaaaaaaaaaally loooooooooooooong"
    ---

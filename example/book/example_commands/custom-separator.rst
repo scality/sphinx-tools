@@ -1,5 +1,4 @@
-.. command-block:: custom-separator
-   :separator: ~~MY-CUSTOM-SEPARATOR~~
+.. code-block::
 
    cat ./some-k8s-manifest.yaml
    ~~MY-CUSTOM-SEPARATOR~~

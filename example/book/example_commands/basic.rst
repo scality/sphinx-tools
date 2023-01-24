@@ -1,6 +1,5 @@
-.. command-block:: echo-args
-   :prompt: [user@host ~]$
-
+.. command-block:: test-command
+    
    ./echo-args.sh --stdout \
        me \
        you \
