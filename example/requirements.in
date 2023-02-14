@@ -1,3 +1,4 @@
 Sphinx >= 1.7.5
 sphinx-design
 sphinxcontrib-images
+six
