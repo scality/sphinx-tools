@@ -2,9 +2,7 @@ const ARTESCA_DOCS_FEEDBACK_PROJECT_ID = "18624d5b-3d00-4989-8979-f835d24cf876"
 const RING_DOCS_FEEDBACK_PROJECT_ID = "706d6ef8-5d55-47c7-b89b-45340f79e133"
 const OLD_DOCS_FEEDBQCK_PROJECT_ID = "07e4358a-627c-4fd5-bbed-181f476eacc8";
 
-window.onUsersnapCXLoad = function(api) {
-    api.init();
-
+function displayExpectedFeedbackButton(api) {
     const isArtescaDocs = location.pathname.startsWith("/XDM") && location.pathname.startsWith("/Artesca");
 
     //Todo remove this once the old doc project is disabled 
@@ -15,6 +13,17 @@ window.onUsersnapCXLoad = function(api) {
     } else {
         api.show(RING_DOCS_FEEDBACK_PROJECT_ID)
     }
+}
+
+window.onUsersnapCXLoad = function (api) {
+    api.init();
+
+    displayExpectedFeedbackButton(api);
+
+    function handleWidgetClosed(event) {
+        displayExpectedFeedbackButton(api);
+    }
+    api.on('close', handleWidgetClosed)
 }
 var script = document.createElement('script');
 script.defer = 1;
