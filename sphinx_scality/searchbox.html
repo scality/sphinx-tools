@@ -1,9 +1,10 @@
 {%- if builder != 'singlehtml' %}
-<div role="search">
+<div class="search_container" role="search">
   <form id="search-form" class="wy-form" action="{{ pathto('search') }}" method="get">
     <input type="text" name="q" placeholder="{{ _('Search docs') }}" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
+    <button type="submit" ><i class="fa fa-search"></i></button>
   </form>
 </div>
 {%- endif %}
