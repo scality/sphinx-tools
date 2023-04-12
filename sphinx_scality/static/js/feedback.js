@@ -3,7 +3,7 @@ const RING_DOCS_FEEDBACK_PROJECT_ID = "706d6ef8-5d55-47c7-b89b-45340f79e133"
 const OLD_DOCS_FEEDBQCK_PROJECT_ID = "07e4358a-627c-4fd5-bbed-181f476eacc8";
 
 function displayExpectedFeedbackButton(api) {
-    const isArtescaDocs = location.pathname.startsWith("/XDM") && location.pathname.startsWith("/Artesca");
+    const isArtescaDocs = location.pathname.startsWith("/XDM") || location.pathname.startsWith("/Artesca");
 
     //Todo remove this once the old doc project is disabled 
     api.hide(OLD_DOCS_FEEDBQCK_PROJECT_ID);
