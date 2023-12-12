@@ -4,7 +4,7 @@ function fontAwesomeIcon(name) {
   return icon;
 }
 
-function attachCopyButton(className, copyText, copyArea) {
+function attachCopyButton(className, copyArea) {
   // Tooltip
   const tooltip = document.createElement("div");
   tooltip.className = `${className}__copy-tooltip`;
@@ -18,7 +18,9 @@ function attachCopyButton(className, copyText, copyArea) {
   // Button
   const button = document.createElement("a");
   button.className = `${className}__copy-button`;
+  
   button.onclick = () => {
+    const copyText = copyArea.parentElement.children[0].innerText.trimEnd();
     navigator.clipboard
       .writeText(copyText)
       .then(() => {
@@ -78,11 +80,8 @@ function attachAllCopyButtons(className, contentModifier) {
   for (let index = 0; index < blocks.length; index++) {
     const block = blocks[index];
     const copyArea = block.getElementsByClassName(`${className}__copy`)[0];
-    const contentArea = block.getElementsByClassName(
-      `${className}__${contentModifier}`
-    )[0];
-    const copyText = contentArea.innerText.trimEnd();
-    attachCopyButton(className, copyText, copyArea);
+    
+    attachCopyButton(className, copyArea);
     console.debug(`Added copy button for ${block.id}`);
   }
 }
