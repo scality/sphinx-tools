@@ -24,6 +24,14 @@ window.onUsersnapCXLoad = function (api) {
         displayExpectedFeedbackButton(api);
     }
     api.on('close', handleWidgetClosed)
+
+    if (navigation) {
+        navigation.addEventListener("navigate", (event) => {
+            setTimeout(() => {
+                displayExpectedFeedbackButton(api);
+            })
+        });
+    }
 }
 var script = document.createElement('script');
 script.defer = 1;
