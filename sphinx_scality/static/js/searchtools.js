@@ -52,10 +52,6 @@ if (!splitQuery) {
 /**
  * Search Module
  */
-
-
-
-
 var Search = {
 
   _index: null,
@@ -316,7 +312,6 @@ var Search = {
       else {
         Search.stopPulse();
         Search.title.text(_('Search Results'));
-        
         if (DOCUMENTATION_OPTIONS.KBLINK != "") {
           kblink = `<a href="https://support.scality.com/hc/en-us/categories/360001132932-Knowledge-Base">RING Knowledge Base</a>`
           community = `<a href="https://support.scality.com/hc/en-us/community/topics">Scality Customer Community</a>`
@@ -329,7 +324,7 @@ var Search = {
           extraHint = ""
         }
 
-        if (!resultCount) { 
+        if (!resultCount) {
           Search.status.html(_(
             `${extraHint}`
           ));
@@ -345,7 +340,7 @@ var Search = {
           ));
         }
         Search.status.fadeIn(500);
-      }    
+      }
     }
     displayNextItem();
   },
