@@ -252,6 +252,7 @@ var Search = {
 
     // print the results
     var resultCount = results.length;
+
     function displayNextItem() {
       // results left, load the summary and display it
       if (results.length) {
@@ -311,28 +312,31 @@ var Search = {
       else {
         Search.stopPulse();
         Search.title.text(_('Search Results'));
-
         if (DOCUMENTATION_OPTIONS.KBLINK != "") {
-          kblink = `<a href="${DOCUMENTATION_OPTIONS.KBLINK}">Knowledge Base</a>`
-          community = `<a href="https://support.scality.com/hc/en-us/community/topics">SOLVED Customer Community</a>`
-          extraHint = ` Try browsing the ${kblink} or ask on ${community}. For urgent issues contact Scality Support.`
+          kblink = `<a href="https://support.scality.com/hc/en-us/categories/360001132932-Knowledge-Base">RING Knowledge Base</a>`
+          community = `<a href="https://support.scality.com/hc/en-us/community/topics">Scality Customer Community</a>`
+          tryThisOrThat = `Try expanding your search parameters, or refer to the ${kblink} or the ${community}.`
+          support = `<a href="https://support.scality.com/">Customer Support</a>`
+          noMatch = `No results found.`
+          supportString = `Contact  ${support} for urgent issues.`
+          extraHint = `${noMatch} ${tryThisOrThat} ${supportString}`
         } else {
           extraHint = ""
         }
 
         if (!resultCount) {
           Search.status.html(_(
-            `Your search did not match any documents.${extraHint}`
+            `${extraHint}`
           ));
         } else {
           matchTerms = searchtermfull.map(
             term => `<span class="term">"${term}"</span>`
           );
           if (extraHint != "") {
-            extraHint = ` Still not what you are looking for?${extraHint}`
+            extraHint = ` Still not what you are looking for? ${tryThisOrThat} ${supportString}`
           }
           Search.status.html(_(
-            `Found ${resultCount} page(s) matching the term(s) ${matchTerms}.${extraHint}`
+            `Found ${resultCount} page(s) matching the term(s) ${matchTerms}. ${extraHint}`
           ));
         }
         Search.status.fadeIn(500);
@@ -520,8 +524,6 @@ var Search = {
     $.each(partial_hlwords, function () {
       rv = rv.highlightText(this, 'partialMatchHighlight');
     });
-
-
 
     return rv;
   }
