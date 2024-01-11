@@ -19,7 +19,8 @@ file with the previously chosen version number.
 
 Once the pull request merged, [create a new release] with the following parameters:
 
-- Choose a tag: Input the version number, and click on `Create new tag: x.y.z on publish`
+- Choose a tag: Input the version number, prefixed by `v`
+  and click on `Create new tag: x.y.z on publish`
 - Target: `master`
 - Click on `Generate release notes`
 - Click on `Publish release`
