@@ -219,7 +219,7 @@ div.sidebar-nav a.current {
 }
 
 /* Left sidebar release info */
-div.sidebar.left div.sidebar-relinfo {
+div.sidebar.left div.sidebar-relinfo div.sidebar-termsandconditions{
     margin-top: 50px;
 }
 

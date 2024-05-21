@@ -133,6 +133,7 @@ html_theme_options = {
     # Release notes
     'releasenoteslinkpdf': 'https://en.wikipedia.org/wiki/Release_notes',
     'releasenoteslinkhtml': 'https://confluence.atlassian.com/jirasoftware/jira-software-release-notes-776821069.html',
+    'termsandconditionspdf': 'https://en.wikipedia.org/wiki/Terms_of_service',
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
