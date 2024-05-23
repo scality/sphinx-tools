@@ -136,7 +136,7 @@
       <div class="sidebar-termsandconditions">
         {%- if theme_termsandconditionspdf | default('') != '' %}
         <p class="rn-title">Terms and Conditions</p>
-        <a href="{{ theme_termsandconditionspdf }}">PDF</a>
+        <a href="{{ pathto(theme_termsandconditionspdf, 1) }}">PDF</a>
         {%- endif %}
       </div>
       {%- endblock %} {# sidebartermsandconditions #}
