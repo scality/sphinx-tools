@@ -35,24 +35,18 @@ p {
 /* Scality documentation logo */
 
 div.baselogo > a {
-    display: flex;
+    display: inline-block;
     font-family: Arial, sans-serif;
     font-weight: 300;
     font-size: 28px;
 }
 
-div.header div.baselogo > a {
-    color: {{ theme_headtextcolor }};
-    text-decoration: none;
-}
-
-div.header div.baselogo > a:hover {
-    color: {{ theme_headtextcolor }};
-    text-decoration: none;
+div.header div.baselogo > a img.baselogo:hover {
+    cursor: pointer;
 }
 
 img.baselogo {
-    width: 150px;
+    width: 140px;
 }
 
 /* HEADER */
