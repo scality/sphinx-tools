@@ -1,9 +1,13 @@
 {%- if builder != 'singlehtml' %}
+{#
+  Scality search box. Replaces the default Sphinx search form with the
+  <docs-search> web component (vendored from scality/docs-static-search into
+  _static/js/docs-search.js — see searchbar.json / scripts/vendor-searchbar.sh).
+  It reads this doc's own searchindex.js, so search runs fully client-side and
+  links results relative to the current page.
+#}
 <div role="search">
-  <form id="search-form" class="wy-form" action="{{ pathto('search') }}" method="get">
-    <input type="text" name="q" placeholder="{{ _('Search docs') }}" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  <script type="module" src="{{ pathto('_static/js/docs-search.js', 1) }}"></script>
+  <docs-search searchindex-url="{{ pathto('searchindex.js', 1) }}" style="--ds-accent: #F54F29;"></docs-search>
 </div>
 {%- endif %}
