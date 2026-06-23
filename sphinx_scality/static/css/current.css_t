@@ -54,7 +54,8 @@ img.baselogo {
 div.header {
     grid-area: header;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     background-color: {{ theme_headbgcolor }};
     color: {{ theme_headtextcolor }};
     padding: 20px 20px 10px;
@@ -66,8 +67,9 @@ div.header img.logo {
     margin-right: 10px;
 }
 
-div.header > div.quicksearch input[name="q"] {
-    float: right;
+/* Push the search box to the far right of the header, next to the logo */
+div.header > div.quicksearch {
+    margin-left: auto;
 }
 
 /* Header logo arrow */
