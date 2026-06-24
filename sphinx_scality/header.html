@@ -8,16 +8,12 @@
         {%- if has_homelink %}</a>{% endif %}
     </div>
 
+    {% if theme_parentlink | default('') != '' %}
+    <div class="back-link">
+        <a href="{{ theme_parentlink }}">back to documentation index</a>
+    </div>
+    {% endif %}
     <div class="quicksearch">
         {%- include "searchbox.html" %}
     </div>
-    {% if theme_parentlink | default('') != '' %}
-    <div class="back-arrow">
-        <a href="{{ theme_parentlink }}">
-            <img class="back-arrow"
-                 src="{{ pathto('_static/img/back-arrow.png', 1) }}"
-                 alt="Website home"/>
-        </a>
-    </div>
-    {% endif %}
 </div>
