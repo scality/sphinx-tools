@@ -7,7 +7,7 @@ html {
     height: 100%;
 }
 
-{#- Account for optional back-arrow height #}
+{#- Reserve extra header height when the home/back links are shown #}
 {%- if theme_homelink | default('') != '' %}
   {%- set header_height = '150px' %}
 {%- else %}
@@ -67,19 +67,35 @@ div.header img.logo {
     margin-right: 10px;
 }
 
-/* Push the search box to the far right of the header, next to the logo */
-div.header > div.quicksearch {
+/* Push the back link + search box to the far right of the header.
+   Whichever comes first owns the auto margin; when the back link is
+   present it sits just to the left of the search box. */
+div.header > div.quicksearch,
+div.header > div.back-link {
     margin-left: auto;
+}
+
+div.header > div.back-link + div.quicksearch {
+    margin-left: 24px;
+}
+
+/* Back-to-index textual link (replaces the former back-arrow icon) */
+div.header > div.back-link a {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: {{ theme_defaultlink }};
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.header > div.back-link a:hover {
+    text-decoration: underline;
 }
 
 /* Header logo arrow */
 
 div.baselogo > a {
     font-size: 19px;
-}
-
-div.header > div.back-arrow img {
-    height: 30px;
 }
 
 div.logo img {
